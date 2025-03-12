@@ -1,0 +1,16 @@
+Los objetos de la clase Currency almacenan una cantidad en euros en su propiedad value.
+
+El método convert_to devuelve la cantidad equivalente en otra moneda, de acuerdo a unas tasas de cambio predeterminadas (exchange rates). Las tasas de cambio están almacenadas en una variable de clase llamada __exchange_rates, que es un diccionario que almacena la tasa de cambio de diferentes monedas con respecto al Euro.
+
+Añada un método de clase llamado rate que devuelva la tasa de cambio para una moneda cuyo código se le pasa como un parámetro string. En caso de que la variable __exchange_rates no tenga una clave que coincida con dicho parámetro, el método rate devolverá None.
+
+ 
+Ejemplo:
+Currency	rate
+EUR	1.0
+JPY	124.83
+USD	1.11918
+GBP	0.85806
+
+print(Currency.rate("GBP")) # Prints 0.85806
+print(Currency.rate("CAD")) # Prints None

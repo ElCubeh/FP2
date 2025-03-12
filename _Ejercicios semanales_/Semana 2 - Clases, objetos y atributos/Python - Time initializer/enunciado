@@ -1,0 +1,6 @@
+Defina una clase llamada Time que incluya un método de inicialización. Los objetos de la clase deberán tener dos atributos llamados hour y minute. Se asume que hour tiene un valor entero entre 0 y 23, y minute un valor entero entre 0 y 59. Los valores para ambos atributos se pasarán en la expresión constructora en el orden mencionado.
+
+Ejemplo:
+
+    t1 = Time(12, 0)
+    t2 = Time(8, 54)

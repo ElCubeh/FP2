@@ -1,0 +1,13 @@
+En el módulo exceptions están definidas las excepciones AssocError y CheckError.
+
+En el módulo functions está definida la función assoc(extensiones, programas), que gestiona las asociaciones de las extensiones de archivos. Esta función devuelve como resultado un número entero, y pudiera lanzar, según las circunstancias, la excepción AssocError o la excepción CheckError.
+
+Implemente en el módulo solution una función llamada control, que admita los mismos parámetros que la función assoc. La función control debe usar estos parámetros para llamar a la función assoc y actuar según el resultado obtenido:
+
+Si la llamada a assoc termina sin lanzar ninguna excepción y devuelve un valor menor que 5, control devolverá como resultado el mismo valor.
+Si la llamada a assoc lanza la excepción CheckError, control devolverá como resultado la string
+"Se ha producido la excepción CheckError con el mensaje: 'M'"
+donde M representa el mensaje asociado a la excepción CheckError.
+Si la llamada a assoc termina sin lanzar ninguna excepción y devuelve un valor mayor o igual que 5, control lanzará la excepción AssocError con el mensaje
+"Error de asociación X"
+donde X es el valor devuelto por la llamada a la función assoc.

@@ -1,0 +1,11 @@
+Los objetos de la clase Currency almacenan una cantidad en euros en su propiedad value.
+ 
+El método convert_to devuelve la cantidad equivalente en otra moneda, de acuerdo a unas tasas de cambio predeterminadas (exchange rates). Las tasas de cambio deben almacenarse en una variable de clase llamada exchange_rates, que es un diccionario que almacena la tasa de cambio de diferentes monedas con respecto al Euro. Esta variable aún no se ha añadido a la clase.
+ 
+Añada la variable de clase exchange_rates a la clase Currency, e inicialícela de acuerdo con la siguiente tabla:
+
+Currency	rate
+EUR	1.0
+JPY	124.83
+USD	1.11918
+GBP	0.85806

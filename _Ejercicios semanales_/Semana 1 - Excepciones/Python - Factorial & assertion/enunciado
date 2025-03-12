@@ -1,0 +1,3 @@
+Escriba una función llamada factorial que acepte un parámetro que sea un número entero mayor o igual que cero. La función deberá devolver el factorial del número pasado como parámetro.
+
+La función deberá usar asertos para comprobar que el valor pasado sea un número entero mayor o igual que cero. En caso de no serlo, la función terminará con una excepción AssertionError con el mensaje "Invalid data".

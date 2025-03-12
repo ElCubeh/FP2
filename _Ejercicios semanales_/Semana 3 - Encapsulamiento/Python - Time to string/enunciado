@@ -1,0 +1,4 @@
+Construya una clase de nombre Time que permita construir objetos conteniendo hora y minuto, y que permita obtener sus representaciones como string, tanto formal como informal.
+ 
+La representación formal debe tener el formato: "Time(h, m)", como en "Time(9, 30)".
+La representación informal debe tener el formato: "hh:mm", como en "09:30".

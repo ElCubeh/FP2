@@ -1,0 +1,5 @@
+Construya una clase de nombre Time que permita construir objetos con las propiedades hour y minute.
+ 
+Debe asegurarse de que la propiedad hour solo acepta valores de tipo int entre 0 y 23, y la propiedad minute valores de tipo int entre 0 y 59. Si se pretende dar a cualquiera de las propiedades un valor que no sea de tipo int, se le dará el valor 0 a esa propiedad. Si se intenta dar un valor fuera del rango permitido, se le dará 0 si el valor es inferior, o el valor máximo de la propiedad si el valor es superior (mayor que 23 para hour o que 59 para minute).
+ 
+Note: Recuerde que la función predefinida type() devuelve el tipo del objeto que se le pasa como parámetro y es útil para saber si el valor que se quiere asignar a una propiedad es del tipo adecuado.

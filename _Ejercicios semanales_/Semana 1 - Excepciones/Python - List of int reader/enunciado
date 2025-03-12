@@ -1,0 +1,7 @@
+Escriba una función llamada list_reader, que acepte un parámetro que sea un número entero positivo. La función deberá devolver una lista de números enteros; esta lista tendrá el tamaño especificado en el parámetro pasado.
+
+Si el parámetro que recibe es un entero positivo, la función pedirá al usuario tantos números como indica el valor del parámetro y formará con ellos una lista, en el orden de lectura, que devolverá. En caso de que el usuario se equivoque al introducir valores (introduzca valores no convertibles al tipo int), la función tratará la excepción que se produzca para continuar pidiendo números al usuario hasta obtener todos los que necesita.
+
+En caso de que el parámetro que se le pase no sea de tipo int, la función lanzará una excepción TypeError con el mensaje "Invalid type for list length".
+
+En el caso de que el parámetro que se le pase sea de tipo int, pero no sea un número positivo, la función lanzará la excepción ValueError con el mensaje "List length must be a positive number".

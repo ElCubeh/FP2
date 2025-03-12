@@ -1,0 +1,2 @@
+Añada una nueva propiedad de solo lectura (no modificable) llamada area a la clase Rectangle. 
+Esta propiedad debe devolver el área del rectángulo, que como sabemos se calcula como el producto de la base (length) por la altura (width).

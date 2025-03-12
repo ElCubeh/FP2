@@ -1,0 +1,17 @@
+# Escriba su código aquí
+
+class Person:
+    def __init__(self, name, surname, address):
+        self.name = name
+        self.surname = surname
+        self.address = address
+
+
+if __name__ == "__main__":
+    # Example of use (not part of the solution)
+
+    person1 = Person("Anne", "Ricksaw", "Oxford street, 50. London, England")
+
+    print("Name   : {}".format(person1.name))
+    print("surname: {}".format(person1.surname))
+    print("Address: {}".format(person1.address))

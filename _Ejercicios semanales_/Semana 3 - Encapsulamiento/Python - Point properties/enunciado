@@ -1,0 +1,7 @@
+Los objetos de la clase Point representan puntos en un plano. Un punto en un plano se identifica mediante dos coordenadas (x, y), que en la clase Point se representan como atributos.
+ 
+Modifique adecuadamente la clase Point de forma que permita construir objetos conteniendo dichas coordenadas convirtiendo los atributos x e y en propiedades con esos mismos nombres.
+ 
+Asegúrese de que esas propiedades solo aceptan valores de tipo int o float, de forma que, si se intenta dar un valor de otro tipo a alguna de las propiedades, se lance la excepción TypeError con el mensaje "improper type for x coordinate" o "improper type for y coordinate", según sea el caso.
+ 
+Nota: Recuerde que la función predefinida type devuelve el tipo del objeto que se le pasa como parámetro y se puede usar para saber si el valor con el que se va a inicializar una propiedad es del tipo adecuado.

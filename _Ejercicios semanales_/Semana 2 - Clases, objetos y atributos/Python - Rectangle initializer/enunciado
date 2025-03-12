@@ -1,0 +1,4 @@
+Implemente en el archivo rectangle.py, una clase llamada Rectangle, que dispondrá de un método __init__ para inicializar los objetos de la clase, el cual debe:
+
+Aceptar (además de self) dos parámetros de tipo float, que representen la base y la altura de un rectángulo, en ese orden.
+Añadir dos atributos llamados length y width e inicializarlos, respectivamente, con los parámetros pasados como base y altura.

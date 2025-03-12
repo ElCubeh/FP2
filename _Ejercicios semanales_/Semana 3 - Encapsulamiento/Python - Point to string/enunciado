@@ -1,0 +1,6 @@
+Los objetos de la clase Point representan puntos en un plano. Un punto en el plano se identifica con dos coordenadas (x, y), que se almacenan como atributos de los objetos de la clase Point.
+ 
+Además de añadir el inicializador apropiado, defina los métodos mágicos necesarios para obtener las representaciones formal e informal como string de un objeto de la clase Point.
+ 
+La representación formal debe tener el formato: "Point(x = valor_x, y = valor_y)", como p.e. "Point(x = 3.5, y = 4.0)".
+La representación informal debe tener el formato: "x, y", como p.e. "3.5, 4.0".

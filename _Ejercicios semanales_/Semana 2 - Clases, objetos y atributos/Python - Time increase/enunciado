@@ -1,0 +1,18 @@
+Añada a la clase Time un método de instancia llamado increase tal que, cada vez que se le llame, incremente el valor del atributo minute en 1; salvo cuando el valor de minute sea igual a 59 al recibir la llamada, en cuyo caso pondrá a cero el valor de minute, y además:
+si el valor del atributo hour es menor que 23, incrementará hour en 1;
+de lo contrario, pondrá hour a cero.
+Ejemplo:
+    t = Time(12, 30)
+    print("Hour = {} and minute = {}".format(t.hour, t.minute)) # Prints "Hour = 12 and minute = 30"
+    t.increase()
+    print("Hour = {} and minute = {}".format(t.hour, t.minute)) # Prints "Hour = 12 and minute = 31"
+Ejemplo:
+    t = Time(12, 59)
+    print("Hour = {} and minute = {}".format(t.hour, t.minute)) # Prints "Hour = 12 and minute = 59"
+    t.increase()
+    print("Hour = {} and minute = {}".format(t.hour, t.minute)) # Prints "Hour = 13 and minute = 0"
+Ejemplo:
+    t = Time(23, 59)
+    print("Hour = {} and minute = {}".format(t.hour, t.minute)) # Prints "Hour = 23 and minute = 59"
+    t.increase()
+    print("Hour = {} and minute = {}".format(t.hour, t.minute)) # Prints "Hour = 0 and minute = 0"

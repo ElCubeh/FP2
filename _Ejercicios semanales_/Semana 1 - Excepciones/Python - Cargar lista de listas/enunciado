@@ -1,0 +1,11 @@
+Desarrolle una función llamada load_list que reciba como parámetro una string que representa el nombre de un fichero de texto. Las líneas de este fichero contienen números enteros separados por un espacio, por ejemplo:
+
+123 24 456 34 899 123
+1324 5123 123 1
+123 5 46 2 46 623 745
+2346 7468 8 967 969
+En el fichero no hay otros caracteres ni líneas vacías.
+
+La función debe devolver una lista de listas de números enteros tal que cada lista de esta estructura almacene los números de la línea correspondiente del fichero en el mismo orden en que se encuentran en dicha línea.
+
+En caso de que no se encuentre un fichero con el nombre pasado como parámetro, la función deberá devolver una lista vacía. Resuelva esta parte controlando en la función la excepción que se produzca en este caso, no preguntando por anticipado si el fichero existe.

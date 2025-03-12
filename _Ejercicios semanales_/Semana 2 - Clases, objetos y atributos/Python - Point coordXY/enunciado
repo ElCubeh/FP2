@@ -1,0 +1,3 @@
+Los objetos de la clase Point representan puntos en un plano. Un punto en el plano se identifica con dos coordenadas (x, y), que se almacenan como atributos de los objetos de la clase Point.
+
+Añada a la clase Point un método de instancia llamado coordXY que devuelva una tupla con la pareja de coordenadas (x, y) del objeto al que se aplique.

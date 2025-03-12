@@ -1,0 +1,1 @@
+Añada a la clase Rectangle una variable de clase llamada __live_rectangles, que se inicializará con el valor 0, y será modificada por el método __init__ sumándole 1 cada vez que se cree un objeto de la clase Rectangle.

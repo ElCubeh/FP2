@@ -1,0 +1,14 @@
+Los objetos de la clase Point representan puntos en un plano. Un punto en el plano se identifica con dos coordenadas (x, y), que se almacenan como atributos de los objetos de la clase Point.
+ 
+Añada a la clase Point un método de instancia llamado move. El método move tendrá dos parámetros (además de self), que se usarán para modificar los atributos x e y del objeto self (el primer parámetro se sumará al valor de x y el segundo al de y).
+ 
+Ejemplo:
+    p = Point(3.0, 4.5)
+    print("(x = {}, y = {})".format(p.x, p.y)) # Muestra "x = 3.0, y = 4.5"
+    p.move(1.0, -1.0)
+    print("(x = {}, y = {})".format(p.x, p.y)) # Muestra "x = 4.0, y = 3.5"
+Ejemplo:
+    p = Point(0.0, 0.0)
+    print("(x = {}, y = {})".format(p.x, p.y)) # Muestra "x = 0.0, y = 0.0"
+    p.move(1.0, -1.0)
+    print("(x = {}, y = {})".format(p.x, p.y)) # Muestra "x = 1.0, y = -1.0"

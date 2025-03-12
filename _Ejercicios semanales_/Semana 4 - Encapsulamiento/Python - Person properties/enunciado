@@ -1,0 +1,3 @@
+Complete la clase Person para que permita construir objetos con las propiedades name y surname.
+ 
+Debe asegurarse de que ambas propiedades solo aceptan como valores válidos strings no vacías. Si para alguna de las propiedades esto no se cumple, se asignará a esa propiedad el valor "unknown".

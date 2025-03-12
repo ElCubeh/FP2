@@ -1,0 +1,6 @@
+Defina una clase llamada Person, que disponga de un método de inicialización. Los objetos de la clase Person tendrán tres atributos de datos, llamados name, surname y address. Los valores para estos atributos se pasarán al inicializar el objeto en el orden mencionado.
+
+Ejemplo:
+
+    p1 = Person("Anne", "Ricksaw", "Oxford street, 50. London, England")
+    p2 = Person("Peter", "Forstran", "Cooperhills road, 1023, Los Angeles, USA")

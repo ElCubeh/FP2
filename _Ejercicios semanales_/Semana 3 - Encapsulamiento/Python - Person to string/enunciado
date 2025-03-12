@@ -1,0 +1,5 @@
+Construya una clase de nombre Person que permita construir objetos conteniendo nombre y apellido (name y surname en inglés) así como obtener sus representaciones como string, tanto formales como informales.
+
+La representación formal debe tener el formato «Person("name ", "surname")», como p.e. «Person("John", "Doe")».
+
+La representación informal debe tener el formato «name surname», como p.e. «John Doe».

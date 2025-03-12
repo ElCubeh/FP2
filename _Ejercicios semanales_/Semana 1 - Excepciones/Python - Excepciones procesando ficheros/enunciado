@@ -1,0 +1,13 @@
+En el módulo exceptions están definidas las excepciones FileReadError, FileWriteError y ProcessError.
+
+En el módulo functions está definida la función inspect_file, que admite como parámetros dos strings, que representan los nombres de un fichero de texto a procesar, y de un fichero a crear con los resultados del proceso. La función inspect_file puede lanzar, según las circunstancias, la excepción FileReadError o la excepción FileWriteError.
+
+Implemente en el módulo solution una función llamada control que admita como parámetros dos strings representando nombres de ficheros como los descritos. La función control debe usar estos nombres para llamar a la función inspect_file y actuar según el resultado obtenido:
+
+Si la llamada a inspect_file termina sin lanzar ninguna excepción, control devolverá como resultado el valor booleano True
+Si la llamada a inspect_file lanza la excepción FileReadError, control devolverá como resultado la string
+ "Se ha producido la excepción FileReadError con el mensaje: 'M'"
+donde M representa el mensaje asociado a la excepción FileReadError.
+Si la llamada a inspect_file lanza la excepción FileWriteError, control lanzará la excepción ProcessError con el mensaje
+ "Error de proceso".
+NOTA: En este ejercicio no tiene sentido que se pueda ejecutar el código.
