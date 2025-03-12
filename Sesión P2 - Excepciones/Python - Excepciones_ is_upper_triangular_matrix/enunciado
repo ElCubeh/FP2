@@ -1,0 +1,10 @@
+Desarrolle una función llamada is_upper_triangular_matrix que devuelva mediante un booleano si una matriz es triangular superior o no. Una matriz triangular superior se define como aquella matriz cuadrada cuyos elementos bajo la diagonal principal son ceros. La matriz se pasa a la función en forma de lista de listas (filas).
+
+Desarrolle dicha función teniendo en cuenta que deberá lanzar la excepción BadMatrix con el texto "Matriz no cuadrada" si la matriz pasada no es cuadrada. Y que, de ser cuadrada, lanzará la excepción BadMatrix con el texto "Dato no convertible a entero" en caso de que algún elemento no sea entero (int), ni ristra (str) representando un valor entero.
+
+Ejemplo de matriz triangular superior en el formato esperado:
+
+[ [1, 0, 0, "1"],
+  [0, 4, 0, 0],
+  [0, 0, "-2", 0],
+  [0, 0, "0", -1] ]

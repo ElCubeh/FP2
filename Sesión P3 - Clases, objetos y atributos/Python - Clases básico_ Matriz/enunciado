@@ -1,0 +1,15 @@
+Se está desarrollando una clase llamada Matriz para representar matrices bidimensionales. Los índices de acceso a la matriz comienzan en cero y terminan en la dimensión correspondiente menos uno.
+
+El constructor ya se encuentra escrito (ver código suministrado), de forma que, recibiendo tres parámetros (número de filas n, número de columnas m y valor inicial v), crea como atributo del objeto una matriz bidimensional n×m inicializando todos sus elementos con el valor de v.
+
+Añada a la definición de la clase llamada Matriz los siguientes métodos:
+
+dimensiones, que devuelve una tupla con las dos dimensiones (nº de filas, nº de columnas) de la propia matriz.
+valor, que, recibiendo dos parámetros con los índices de fila y de columna, devuelve el valor almacenado en dicha posición de la matriz.
+cambia_valor, que, recibiendo tres parámetros: los índices de fila y de columna y un valor, almacena en el elemento indicado de la matriz el valor del último parámetro.
+get_str, que devuelve una ristra que representa la matriz con el usual formato de lista de listas.
+Además de lo anterior, los métodos  valor y  cambia_valor lanzarán una excepción  IndexError si se intenta acceder con algún índice fuera de rango como se dijo al principio.
+
+Por ejemplo, para los parámetros de creación 2, 3 y 5, obtendríamos como dimensiones (2, 3) y el valor que obtendríamos en la posición 0,0 sería 5; y si en dicha posición lo cambiáramos a -3, get_str nos suministraría "[[-3, 5, 5], [5, 5, 5]]".
+
+5/10

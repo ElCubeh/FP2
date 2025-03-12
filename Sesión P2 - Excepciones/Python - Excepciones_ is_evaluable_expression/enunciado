@@ -1,0 +1,7 @@
+Desarrolle en el fichero solution.py una función llamada is_evaluable_expression para verificar que una expresión simple recibida por parámetro es evaluable (esto es, que supera ciertos chequeos que se indican a continuación). Devolverá un booleano (indicando True que es evaluable), pudiendo lanzar, si se da la circunstancia, la excepción BadExpression (ya definida).
+
+La expresión se recibirá en forma de ristra y tendrá un número impar de componentes, operandos y operadores, alternados y separados por espacio. Para asegurarse de que es evaluable, la función deberá comprobar, en el siguiente orden:
+
+Que los operandos (o sea, aquellos componentes que ocupan las posiciones pares, comenzando a contar en cero) representan valores enteros. De lo contrario, deberá lanzar la excepción BadExpression con el mensaje "Operando no entero".
+Que los operadores (o sea, aquellos componentes que ocupan las posiciones impares) están entre los admisibles, que son '+', '-', '*' y '/'. De lo contrario, deberá lanzar la excepción BadExpression con el mensaje "Operador erróneo".
+Ver ejemplos y resultados esperados en el código suministrado.

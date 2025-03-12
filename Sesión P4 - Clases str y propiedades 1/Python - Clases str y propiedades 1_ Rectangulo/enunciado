@@ -1,0 +1,26 @@
+Se desea crear una clase llamada Rectangulo (sin acento) para representar en el plano rectángulos de lados paralelos a los ejes x e y. Los objetos de dicha clase representan el rectángulo mediante los dos puntos que corresponden a sus vértices inferior izquierdo y superior derecho:
+
+![alt text](image.png)
+
+Se dispone, ya desarrollada (ver código suministrado), de una clase llamada Punto que permite almacenar como atributos las coordenadas x e y de cada punto. Usando apropiadamente la clase Punto, modifique la clase Rectangulo suministrada de forma que disponga de las siguientes características adicionales:
+
+Un inicializador (constructor) que permite crear un rectángulo a partir de dos puntos, vértice inferior izquierdo y vértice superior derecho.
+Si el primer y segundo Punto recibidos por el inicializador no puedan formar un Rectangulo (o sea, si la posición relativa de los puntos no les permite ser, respectivamente, vértice inferior izquierdo y vértice superior derecho del Rectangulo a construir), se debe lanzar la excepción BadRectangle definida en el módulo solution.
+Método booleano esta_contenido que, pasándole un objeto de tipo Punto, devuelve si éste se encuentra o no en el interior del rectángulo.
+Propiedades ini y fin de lectura y escritura correspondientes, respectivamente, al Punto inferior izquierdo y al superior derecho. En caso de que se reciba un Punto que, junto con el otro, no puedan formar un Rectangulo, se debe lanzar la mencionada excepción BadRectangle.
+Los métodos necesarios para la representación informal del rectángulo, que será una ristra representando el rectángulo en la que aparezcan entre "<" y ">" una representación de los puntos de las dos esquinas indicadas separados por ", " (coma y espacio). Cada punto se representará por sus valores de x e y entre paréntesis y separados a su vez por ", " (coma y espacio); por ejemplo: para Rectangulo(Punto(-1, 2.5), Punto(3, 4)) deberá devolver "<(-1, 2.5), (3, 4)>".
+Ejemplos:
+Puntos (2, 3) (3, 4)                                                            
+Está contenido el Punto(0, 0): False                                             
+Rectángulo <(2, 3), (3, 4)>                                                     
+                                                                                
+Puntos (-2, -3) (1, 5)                                                          
+Está contenido el Punto(0, 0): True                                              
+Rectángulo <(-2, -3), (1, 5)>                                                   
+                                                                                
+Puntos (3, 5) (1, 6)                                                            
+Rectángulo erróneo                                                              
+                                                                                
+Puntos (1, 3) (3, 2)                                                            
+Rectángulo erróneo  
+Nota: puede dejar abierto el prontuario (cheat sheet) de Python para su consulta.

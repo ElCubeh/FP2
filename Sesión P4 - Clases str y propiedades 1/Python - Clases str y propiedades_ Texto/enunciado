@@ -1,0 +1,22 @@
+Se desea crear una clase llamada Texto para representar un texto formado por una secuencia de párrafos. Cada párrafo habrá de ser un objeto de la clase Parrafo (sin acento) conteniendo una ristra; clase que se muestra ya desarrollada pero cuyo código no se debe modificar. Los objetos de la clase Texto se crean partiendo de una secuencia de párrafos que van desde la posición 0 hasta la posición número de párrafos menos 1. La idea es poder manejar los párrafos del texto pudiendo sustituirlos o añadir nuevos así como obtener información de ellos. Modifique la clase Texto de forma que ofrezca las siguientes características adicionales:
+
+La propiedad de solo lectura npalabras, que nos dice cuántas palabras hay en total en el texto.
+El método get_parrafo, que pasándole un índice devuelve el objeto Parrafo en dicha posición.
+El método set_parrafo, que pasándole un índice y un objeto Parrafo cambia el párrafo en dicha posición por el pasado como parámetro.
+La propiedad nparrafos, que cuando se lee nos devuelve el número de párrafos en el texto, y cuando se modifica cambia el número de párrafos en el texto quitando párrafos por el final o añadiendo por el final párrafos conteniendo una ristra vacía.
+Ejemplo para el objeto Texto([Parrafo('Hola ola'), Parrafo('no te decides')]):
+
+Texto ['Hola ola', 'no te decides']                                             
+nparrafos: 2                                                                    
+npalabras: 5                                                                    
+get_parrafo 1: no te decides                                                    
+Representación informal:                                                        
+Hola ola                                                                        
+no te decides                                                                   
+set_parrafo 1 Nuevo párrafo                                                     
+get_parrafo 1: Nuevo párrafo                                                    
+nparrafos: 2                                                                    
+npalabras: 4                                                                    
+Representación informal:                                                        
+Hola ola                                                                        
+Nuevo párrafo

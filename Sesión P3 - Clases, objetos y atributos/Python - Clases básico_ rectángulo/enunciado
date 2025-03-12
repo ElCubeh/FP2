@@ -1,0 +1,10 @@
+Se encuentra parcialmente desarrollanda una clase llamada Rectangulo (ver código suministrado) para representar rectángulos en el plano (dos dimensiones) de lados paralelos a los ejes x e y. Para ello se utilizan los dos puntos que corresponden a las posiciones del vértice inferior izquierdo y del vértice superior derecho.
+
+![alt text](image.png)
+
+Se dispone además de una clase llamada Punto, ya desarrollada, que permite almacenar (y obtener como string) las coordenadas x e y de un punto (ver código suministrado). Usando convenientemente esta clase Punto, añadir los siguientes métodos a la clase Rectangulo:
+
+perimetro, que deberá devolver el perímetro del rectángulo.
+reescalar, que recibe por parámetro un factor numérico de reescalado y deberá modificar el rectángulo representado en el objeto de forma que sus lados cambien proporcionalmente; por ejemplo, si se le pasa un 2.4 las longitudes de su base y de su altura deberán resultar efectivamente multiplicadas por dicha cantidad. Se deberá mantener la posición de su punto inferior izquierdo, modifcando únicamente el de la esquina superior derecha.
+get_str, que deberá devolver una ristra representando el rectángulo en la que aparezcan entre "<" y ">" una representación de los puntos de las dos esquinas indicadas separados por ", " (coma y espacio). Cada punto se representará por sus valores de x e y entre paréntesis y separados a su vez por ", " (coma y espacio); por ejemplo: para Rectangulo(Punto(-1, 2.5), Punto(3, 4)) deberá devolver "<(-1, 2.5), (3, 4)>". Obsérvese que Punto ofrece a su vez un método get_str .
+Ejemplo de uso: si creamos un objeto Rectangulo con dos objeto Punto de coordenadas (2, 3) y (3, 4), obtendremos un perímetro de 4, así como la representación "<(2, 3), (3, 4)>" devuelta por get_str. Después de reescalar dicho objeto con el factor 1.5 su perímetro pasará a 6.0 y su nueva representación devuelta por get_str será "<(2, 3), (3.5, 4.5)>".
