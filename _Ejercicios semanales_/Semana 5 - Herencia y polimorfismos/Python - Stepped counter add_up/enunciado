@@ -1,0 +1,21 @@
+El módulo counter contiene la definción de una clase llamada Counter. Los objetos de esta clase tienen una propiedad no asignable count que se inicializa con el valor 0 (int). Los objetos de la clase Counter también tienen un método add_up que incrementa el valor de la propiedad count en 1 cada vez que se le llama.
+ 
+Ejemplo:
+    c = Counter()
+    print(c.count) # Prints 0
+    c.add_up()
+    print(c.count) # Prints 1
+    c.add_up()
+    print(c.count) # Prints 2
+El módulo steppedcounter define una nueva clase llamada SteppedCounter que hereda de Counter y cuyos objetos tienen una propiedad de solo lectura llamada step que se inicializa en la expresión constructora con un valor entero positivo.
+ 
+Debe modificar SteppedCounter para sustituir el método add_up de Counter de forma que incremente el valor de la propiedad count en el valor indicado por la propiedad step cada vez que se llame.
+
+Ejemplo:
+    c = SteppedCounter(3)
+    print(c.count) # Prints 0
+    c.add_up()
+    print(c.count) # Prints 3
+    c.add_up()
+    print(c.count) # Prints 6
+Pista: la función add_up() de SteppedCounter tiene que apoyarse en la función add_up() de su superclase para conseguir incrementar el contador tantas veces como indique step.

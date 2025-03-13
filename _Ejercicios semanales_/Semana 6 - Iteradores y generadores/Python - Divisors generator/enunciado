@@ -1,0 +1,19 @@
+Escriba un generador llamado divisors que devuelva, uno por uno y en orden ascendente, todos los divisores de un número entero positivo.
+ 
+Ejemplo de uso:
+for i in divisors(5):
+   print(i)
+
+Salida:
+1
+5
+for i in Divisors(12):
+   print(i)
+
+Salida:
+1
+2
+3
+4
+6
+12

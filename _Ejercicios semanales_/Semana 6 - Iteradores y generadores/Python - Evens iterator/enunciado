@@ -1,0 +1,23 @@
+Escriba un iterador llamado Evens que devuelva, uno por uno y en orden ascendente, todos los números pares mayores o iguales que 2 y menores o iguales que un número pasado como parámetro al inicializador.
+ 
+Ejemplo de uso:
+for i in Evens(10):
+   print(i)
+
+Output:
+2
+4
+6
+8
+10
+for i in Evens(15):
+   print(i)
+
+Output:
+2
+4
+6
+8
+10
+12
+14

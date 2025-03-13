@@ -1,0 +1,15 @@
+El módulo point2d contiene la clase Point2d, una clase para representar puntos del plano. La inicialización de un objeto de la clase Point2d necesita de dos parámetros: el primero para la coordenada x, y el segundo para la coordenada y.
+
+ 
+La clase Point2d también tiene un método llamado coordinates. Este método devuelve una tupla con las coordenadas (x, y) del punto. Ejemplo:
+ 
+    p = Point2d(8, 23)
+    print(p.coordinates())  # Prints (8, 23)
+Defina una nueva clase, heredera de la clase Point2d, llamada Point3d. Los objetos de esta nueva clase representan objetos en un espacio tridimensional.
+ 
+La inicialización de un objeto de la clase Point3d necesita de tres parámetros: las coordenadas x e y necesarias para inicializar objetos de la clase Point2d, y la coordenada z añadida en la nueva clase.
+ 
+Además, debe redefinir el método coordinates de forma que devuelva una tripleta, o sea, una tupla de tres elementos (x, y, z). Ejemplo:
+ 
+    p = Point3d(8, 23, 6)
+    print(p.coordinates())  # Prints (8, 23, 6)

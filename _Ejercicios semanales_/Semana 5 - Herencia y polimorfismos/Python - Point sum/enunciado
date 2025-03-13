@@ -1,0 +1,8 @@
+Defina el método mágico apropiado para añadir el comportamiento específico para el operador de adición + entre objetos de la clase Point. La suma de dos puntos debe resultar un nuevo punto cuyas coordenadas sean la suma de las coordenadas correspondientes: (x1, y1) + (x2, y2) = (x1+x2, y1+y2)
+ 
+Ejemplo:
+    p1 = Point(3.0, 4.5)
+    p2 = Point(2.5, 3.0)
+    p3 = p1 + p2
+
+    print("(x = {}, y = {})".format(p3.x, p3.y))  # Prints "x = 5.5, y = 7.5"

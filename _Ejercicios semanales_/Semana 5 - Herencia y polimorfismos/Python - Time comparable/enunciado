@@ -1,0 +1,5 @@
+Añada los métodos mágicos necesarios a la clase Time para que los objetos de dicha clase se puedan comparar empleando cualquiera de los operadores relacionales (<, <=, ==, !=, > y >=).
+ 
+Dos objetos de la clase Time se consideran iguales si lo son sus horas (propiedad hour) y sus minutos (propiedad minute), si no, se considera menor el de menor hora o, a igualdad de horas, el de menor minuto.
+ 
+Se recomienda implementar el menor número posible de métodos mágicos.

@@ -1,0 +1,17 @@
+El módulo mytime contiene la clase Time, una clase para representar horas y minutos. La inicialización de un objeto de la clase Time necesita dos parámetros: uno para las horas y otro para los minutos, en este orden. Se asume que las horas son un valor entero entre 0 y 23 y los minutos un valor entero entre 0 y 59.
+ 
+La clase Time define, además, el método __str__(), que devuelve las horas y minutos representados por un objeto de la clase Time usando el formato "hh:mm".
+ 
+Ejemplo:
+    c = Time(8, 23)
+    print(c)  # Muestra "08:23"
+Debe definir una nueva clase, heredera de la clase Time, llamada TimeWithSeconds. Esta clase cumple el objetivo de añadir segundos a la información representada por la clase Time.
+ 
+La incialización de un objeto de la clase TimeWithSeconds necesita tres parámetros: las horas y los minutos, ambos necesarios para inicializar los objetos de la clase Time; y los segundos, añadidos por la nueva clase.
+ 
+El método __str__() debe sustituirse para devolver la información usando ahora el formato "hh:mm:ss".
+ 
+Ejemplo:
+    c = TimeWithSeconds(8, 23, 6) 
+    print(c) # Prints "08:23:06"
+Nota: se puede añadir código propio de prueba (que no influirá en la evaluación automática, salvo errores que la impidan) a ejecutar solo cuando el módulo sea principal.

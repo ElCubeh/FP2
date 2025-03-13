@@ -1,0 +1,10 @@
+Implemente un generador llamado strings que tome como parámetro una lista con elementos de diferentes tipos y devuelva, uno por uno y en orden de aparición, los elementos que sean de tipo str.
+ 
+Ejemplos de uso:
+for i in strings([5, "uno", 10.8, "dos", 3, "tres"]):
+   print(i)
+
+Output:
+uno
+dos
+tres

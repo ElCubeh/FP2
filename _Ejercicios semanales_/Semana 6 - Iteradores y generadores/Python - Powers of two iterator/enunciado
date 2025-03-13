@@ -1,0 +1,24 @@
+Escriba un iterador llamado PowersOfTwo que devuelva, una por una y en orden ascendente, las primeras n potencias de 2, siendo n un parámetro pasado al inicializador.
+ 
+Ejemplo de uso:
+ 
+for i in PowersOfTwo(5):
+   print(i)
+
+Output:
+1
+2
+4
+8
+16
+
+for i in PowersOfTwo(7):
+   print(i)
+Output:
+1
+2
+4
+8
+16
+32
+64

@@ -1,0 +1,20 @@
+Complete la clase Divisors para convertirla en un iterador que devuelva, uno por uno y en orden ascendente, todos los divisores de un número entero positivo.
+ 
+Ejemplo de uso:
+ 
+for i in Divisors(5):
+   print(i)
+
+Output:
+1
+5
+for i in Divisors(12):
+   print(i)
+
+Output:
+1
+2
+3
+4
+6
+12

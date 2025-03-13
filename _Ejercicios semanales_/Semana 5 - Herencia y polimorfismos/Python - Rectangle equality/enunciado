@@ -1,0 +1,1 @@
+La clase Rectangle se ha diseñado para construir objetos que representen rectángulos en el plano. Añada a dicha clase método mágico apropiado para implementar el comportamiento del operador de igualdad == entre objetos de dicha clase: dos Rectangle se considerarán iguales si tienen iguales longitudes e iguales alturas (propiedades length y width).

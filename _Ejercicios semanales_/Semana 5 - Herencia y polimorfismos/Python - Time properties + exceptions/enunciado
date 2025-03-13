@@ -1,0 +1,7 @@
+La clase Time representa un instante de tiempo mediante dos propiedades: hour y minute.
+
+Defina en el módulo timeexceptions una jerarquía de excepciones formada por tres excepciones:
+TimeError, que será la clase base para la jerarquía
+HourError, pensada para reportar un error en la hora. Tendrá un inicializador con dos parámetros. El primer parámetro se usará para inicializar un atributo llamado value_error. El segundo parámetro será una string que se pasará al inicializador de la superclase; su valor por defecto será "" (string vacía).
+MinuteError, pensada para reportar un error en el minuto. Tendrá un inicializador con dos parámetros. El primer parámetro se usará para inicializar un atributo llamado value_error. El segundo parámetro será una string que se pasará al inicializador de la superclase; su valor por defecto será ""(string vacía).
+Haga las modificaciones necesarias para que, cuando en la clase Time se pretenda asignar a hour un valor mayor que 23, se lance la excepción HourError, pasando como primer parámetro el valor erróneo, y como segundo el mensaje "invalid hour"; y si se pretende asignar a minute un valor mayor que 59, se lance la excepción MinuteError, pasando como primer parámetro el valor erróneo y como segundo el mensaje "invalid minute". Obsérvese que ya se ha preparado un pequeño código propio de prueba, que se permite modificar.

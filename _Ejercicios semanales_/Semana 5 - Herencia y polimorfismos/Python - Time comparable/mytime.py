@@ -1,0 +1,55 @@
+"""This module implements the class Time."""
+
+
+class Time:
+    """Represents a time.
+
+    Attributes:
+    hour:  int; must be 0 <= hour <= 23
+    minute : int; must be 0 <= minute <= 59
+
+    """
+
+    def __init__(self, hour, minute):
+        """Initialize a Time object.
+
+        Parameters:
+        hour   : int; value to initialize hour attribute
+        minute : int; value to initialize minute attribute
+
+        """
+        self.__hour = hour
+        self.__minute = minute
+
+    @property
+    def hour(self):
+        """Return the hour of the Time object self."""
+        return self.__hour
+
+    @property
+    def minute(self):
+        """Return the minute of the Time object self."""
+        return self.__minute
+
+    def __lt__(self, other):
+        if self.__hour == other.__hour:
+            return self.__minute < other.__minute
+        return self.__hour < other.__hour
+
+    def __eq__(self, other):
+        return self.__hour == other.__hour and self.__minute == other.__minute
+
+    def __le__(self, other):
+        return self < other or self == other
+
+    def __gt__(self, other):
+        return not self <= other
+
+    def __ge__(self, other):
+        return not self < other
+
+    def __ne__(self, other):
+        return not self == other
+
+    def __repr__(self):
+        return f"Time({self.__hour}, {self.__minute})"

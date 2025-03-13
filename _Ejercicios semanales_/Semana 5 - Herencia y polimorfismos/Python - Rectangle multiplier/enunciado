@@ -1,0 +1,2 @@
+Defina los métodos mágicos __mul__(self, other) y __rmul__(self, other) para implementar la multiplicación de un objeto de la clase Rectangle por un número entero (int).
+El resultado de la multiplicación será un nuevo Rectangle cuya propiedad length será la resultante de multiplicar la del rectángulo self por el número pasado como parámetro other, y cuya propiedad width será la misma que la de self. Si el parámetro other no es un número entero, el resultado será una copia del rectángulo original.

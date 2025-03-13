@@ -1,0 +1,5 @@
+Defina el método mágico __pow__(self, power) para implementar la operación de elevar un objeto de la clase Rectangle (self) a la power-ésima potencia, debiendo ser power un número entero mayor o igual que cero. La operación de exponenciación de un objeto de la clase Rectangle la hemos definido como:
+ 
+Si power es un número entero positivo, el resultado será un nuevo objeto  Rectangle, cuyas propiedades serán las del original multiplicadas por el parámetro power.
+Si power es cero, el resultado será un nuevo objeto Rectangle de 1x1.
+Si no, el resultado será un nuevo objeto Rectangle de iguales propiedades que el original.

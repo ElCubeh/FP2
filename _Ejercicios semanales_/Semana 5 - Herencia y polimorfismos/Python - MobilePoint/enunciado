@@ -1,0 +1,16 @@
+El módulo point contiene la definición de una clase llamada Point. Los objetos de la clase Point representan puntos en un plano. Un punto en un plano se representa mediante dos coordenadas (x, y), que se guardan con tales nombres como atributos de datos de los objetos de la clase Point.
+ 
+Defina una nueva clase, llamada MobilePoint, heredera de Point, con un nuevo método de instancia llamado move. El método move tendrá dos parámetros (además de self), que se usarán para modificar las coordenadas (x, y) del objeto (el primer parámetro se sumará al valor de x y el segundo al valor de y).
+ 
+Ejemplo:
+    p = MobilePoint(3.0, 4.5)
+    print("(x = {}, y = {})".format(p.x, p.y)) # Prints "x = 3.0, y = 4.5"
+    p.move(1.0, -1.0)
+    print("(x = {}, y = {})".format(p.x, p.y))# Prints "x = 4.0, y = 3.5"
+
+Ejemplo:
+    p = MobilePoint(0.0, 0.0)
+    print("(x = {}, y = {})".format(p.x, p.y)) # Prints "x = 0.0, y = 0.0"
+    p.move(1.0, -1.0)
+    print("(x = {}, y = {})".format(p.x, p.y))# Prints "x = 1.0, y = -1.0"
+ 

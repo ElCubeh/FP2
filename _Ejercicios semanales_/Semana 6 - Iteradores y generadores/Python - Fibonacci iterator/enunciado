@@ -1,0 +1,30 @@
+La secuencia de Fibonacci es una secuencia de números que empieza con los números 0 y 1 y tal que el resto de los números se calculan como la suma de los dos anteriores, esto es:
+F(0) = 0
+F(1) = 1
+F(n) = F(n-1) + F(n-2)
+Complete la clase Fibonacci para convertirla en un iterador que devuelva, uno por uno y en orden ascendente, los n primeros números de la secuencia de Fibonacci, siendo n un número entero positivo.
+ 
+Ejemplo de uso:
+for i in Fibonacci(5):
+   print(i)
+
+Output:
+0
+1
+1
+2
+3
+for i in Fibonacci(10):
+   print(i)
+
+Output:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
