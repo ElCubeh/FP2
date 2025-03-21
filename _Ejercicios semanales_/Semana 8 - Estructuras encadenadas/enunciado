@@ -1,3 +1,0 @@
-Añada a la clase SortedLinkedList que se proporciona un método llamado insert que admita como parámetro un valor a insertar en la lista. El valor se deberá insertar en orden, esto es, después de todos los que sean menores y justo antes de los que sean mayores o iguales.
- 
-La lista deberá permanecer ordenada de menor a mayor en todo momento.
