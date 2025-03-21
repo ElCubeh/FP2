@@ -1,4 +1,5 @@
-e desea crear una clase Matriz para representar matrices cuadradas. Los índices de acceso a la matriz comienzan en cero y terminan en la dimensión correspondiente menos uno. Se pide modificar la clase Matriz suministrada de forma que disponga de las siguientes características adicionales:
+Se desea crear una clase Matriz para representar matrices cuadradas. Los índices de acceso a la matriz comienzan en cero y terminan en la dimensión correspondiente menos uno. 
+Se pide modificar la clase Matriz suministrada de forma que disponga de las siguientes características adicionales:
 
 En caso de que el parámetro nfilas del inicializador sea menor que 1, deberá lanzar la excepción ValueError.
 Una propiedad dimension, que da el nº de filas (o columnas) de la matriz o lo establece. Al establecer una nueva dimensión mayor que la vigente se debe ampliar consecuentemente el número de filas y de columnas rellenando las nuevas posiciones con el valor usado al crear inicialmente la matriz. Si se intentase disminuir la dimensión se lanzará la excepción ValueError.

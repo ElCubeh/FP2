@@ -40,5 +40,6 @@ class Matriz:
     def cambia_valor(self, fila, columna, nuevo_valor):
         if fila < 0 or fila >= self.__dimension or columna < 0 or columna >= self.__dimension:
             raise IndexError("Índice fuera de rango.")
-        return self.__mat[fila][columna]
+        return self.__mat[fila][columna] = nuevo_valor
+
 

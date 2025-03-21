@@ -1,6 +1,12 @@
-Se dispone de una clase Botella parcialmente construida (ver código suministrado). Cada objeto de dicha clase representa una botella de una determinada capacidad, así como con un cierto nivel de contenido actual; cantidades ambas que se suponen en cc (centímetros cúbicos).
+Se dispone de una clase Botella parcialmente construida (ver código suministrado). 
+Cada objeto de dicha clase representa una botella de una determinada capacidad, así como con un cierto nivel de contenido actual; 
+cantidades ambas que se suponen en cc (centímetros cúbicos).
 
-Se desea modificar dicha clase para poder modificar el valor del contenido de botellas individuales, así como conocer cuántas botellas se han creado hasta el momento de cada capacidad. Para ello, ya se ha incluido una variable de clase llamada capacidades, de tipo diccionario, inicialmente vacío, que deberá tener, como claves, capacidades de botellas en cc (p.e. clave 125) y, como contraclaves, cuántas botellas se han creado de tal capacidad (p.e. contraclave 3), indicando así que hasta el momento se han creado 3 botellas de 125cc. Para realizar dicha modificación, haga lo siguiente en la clase Botella:
+Se desea modificar dicha clase para poder modificar el valor del contenido de botellas individuales, 
+así como conocer cuántas botellas se han creado hasta el momento de cada capacidad. Para ello, ya se ha incluido una variable de clase llamada capacidades, 
+de tipo diccionario, inicialmente vacío, que deberá tener, como claves, capacidades de botellas en cc (p.e. clave 125) y, como contraclaves, 
+cuántas botellas se han creado de tal capacidad (p.e. contraclave 3), indicando así que hasta el momento se han creado 3 botellas de 125cc. 
+Para realizar dicha modificación, haga lo siguiente en la clase Botella:
 
 1º Añada un setter a la propiedad contenido que permita modificar el contenido de los objetos de la clase.
 2º Realice las modificaciones necesarias para que cada creación de un nuevo objeto de la clase se contabilice adecuadamente en la variable capacidades.
