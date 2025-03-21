@@ -1,0 +1,8 @@
+El factorial de un número entero no negativo n se define como:
+ 
+0! = 1
+n! = n · (n - 1)!, para n > 0
+
+Se ha desarrollado en el módulo factorial una función llamada Factorial para calcular el factorial de un número entero no negativo. En caso de recibir un número negativo, la función deberá devolver None. No se especifica qué hacer en caso de recibir un valor que no sea un número entero.
+
+Desarrolle en el módulo factorialtests una clase de prueba llamada FactorialTests que implemente, usando unittest, los casos de prueba necesarios para probar la función Factorial descrita en el párrafo anterior.

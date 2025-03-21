@@ -1,0 +1,17 @@
+En el módulo rational se ha implementado una clase llamada Rational para manejar números racionales. Esta clase tiene dos propiedades: numerator (el numerador) y denominator (el denominador).
+
+El inicializador de la clase Rational requiere de dos parámetros (números enteros) para inicializar dichas propiedades. El primer parámetro será el valor para el numerador, y el segundo el valor para el denominador.
+
+El valor para inicializar el numerador debe ser un número entero.
+
+El valor para inicializar el denominador debe ser un número entero distinto de cero.
+
+En caso de que se pase un cero para inicializar el denominador, el inicializador lanzará la excepción ValueError.
+
+En caso de que se pase un número entero negativo para inicializar el denominador, se cambiará internamente el signo tanto del numerador como del denominador recibidos, de forma que, p.e.
+
+Rational( 3, -5) representará internamente el número racional -3/5.
+Rational(-3, -5) representará internamente el número racional 3/5.
+Desarrolle en el módulo rationaltests una clase de prueba llamada InitTests que implemente, usando unittest, los casos de prueba necesarios para probar el inicializador de la clase Rational.
+
+Se recomienda en las pruebas considerar como clases de equivalencia las distintas combinaciones de numerador|denominador positivo|negativo|cero y probar al menos un representante de cada clase.

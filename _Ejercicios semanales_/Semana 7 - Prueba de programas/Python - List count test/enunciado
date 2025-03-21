@@ -1,0 +1,3 @@
+En el módulo functions se ha desarrollado una función llamada count, que admite como parámetros una lista y un valor y devuelve la cuenta del número de veces que el valor aparece en la lista.
+
+Desarrolle en el módulo counttests, una clase de prueba llamada CountTests que implemente, usando unittest, los casos de prueba necesarios para probar la función count descrita en el párrafo anterior.

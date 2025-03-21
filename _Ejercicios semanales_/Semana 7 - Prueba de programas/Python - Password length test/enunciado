@@ -1,0 +1,3 @@
+En el módulo functions se ha desarrollado una función llamada check_pass_len, que admite un único parámetro de tipo string, el cual se supone representa una posible password. El cometido de la función es chequear si dicha string tiene una longitud válida de entre 8 y 15 caracteres, devolviendo True en ese caso y False en cualquier otro.
+
+Desarrolle en el módulo passwlentests una clase de prueba llamada PasswlenTests que implemente, usando unittest, los casos de prueba necesarios para probar la función check_pass_len descrita en el párrafo anterior.
