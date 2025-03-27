@@ -1,0 +1,7 @@
+El módulo clases oferta una clase llamada Barco, que tiene dos propiedades de tipo entero de nombres manga y eslora, que se inicializan a partir de dos parámetros (en dicho orden) al crear un objeto de dicha clase. Implemente en el fichero solution.py una nueva clase llamada Velero, que herede de la clase Barco, con las siguientes particularidades:
+
+Deberá disponer de una nueva propiedad de lectura y escritura llamada palos (número de mástiles del velero).
+
+El inicializador deberá disponer, a continuación de los parámetros necesarios para la expresión constructora de los objetos de la clase Barco, de un parámetro adicional con el que deberá inicializar la propiedad palos.
+
+Deberá definir el menor número de métodos mágicos para que dos objetos de la propia clase se puedan comparar usando los operadores <, <=, ==, !=, > y >=. Para ello se usarán las propiedades heredadas de Barco, de forma que se considerará menor aquel para el que el producto de multiplicar manga por eslora sea menor; y si este producto fuera igual, ambos objetos se considerarán iguales entre sí.

@@ -1,0 +1,3 @@
+En el módulo functions se ha desarrollado una función llamada count_pairs, que, recibiendo como parámetro una lista, devuelve el número de parejas en ella, entendidas como elementos contiguos iguales. Las parejas pueden estar solapadas, p.e. [7, 7, 7, 8, 8, 7] contiene 3 parejas, en los índices (0, 1), (1, 2) y (3, 4).
+
+Desarrolle en el módulo counttests, una clase de prueba llamada CountTests que implemente, usando unittest, los casos de prueba necesarios para probar la función descrita.

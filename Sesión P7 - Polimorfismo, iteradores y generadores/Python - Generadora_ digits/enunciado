@@ -1,0 +1,7 @@
+Implemente en el módulo solution.py una función generadora llamada digits que tome como parámetro una string y devuelva los caracteres en ella que sean dígitos (o sea, alguno de los caracteres '0', '1', ..., '9'), de uno en uno y siguiendo su orden de aparición en la string.
+
+Ejemplo:
+
+string: "El alunizaje número 1 ocurrió en 1969, en el mes 07"
+valores devueltos: '1', '1', '9', '6', '9', '0' y '7' por ser 
+                   los caracteres de dígitos presentes, en ese orden.

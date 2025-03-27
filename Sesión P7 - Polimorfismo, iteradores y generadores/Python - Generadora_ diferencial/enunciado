@@ -1,0 +1,9 @@
+Implemente en el módulo solution.py una función generadora llamada diferencial que tome como parámetro una lista de strings.
+
+La función habrá de devolver tantos valores como elementos tenga la lista, tomados sucesivamente. Si existe un primer elemento, en la primera ocasión devolverá su longitud. Si existe más de uno, a partir del segundo devolverá en cada ocasión la diferencia entre la longitud de ese elemento menos la del anterior en la lista.
+
+Ejemplo:
+
+lista: ["carmelita", "carmelitas", "casas", "gas", "Manhattan", "manos"]
+valores devueltos: 9, 1, -5, -2, 6 y -4, ya que "carmelita" tiene 9 caracteres y "carmelitas"
+                   tiene 1 más, y "casas" tiene 5 menos que "carmelitas", etc.

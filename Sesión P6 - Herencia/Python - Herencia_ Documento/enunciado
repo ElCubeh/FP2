@@ -1,0 +1,7 @@
+El módulo clases oferta una clase llamada Documento, que tiene dos propiedades de tipo string llamadas título y autor, que se inicializan a partir de dos parámetros (en dicho orden) al crear un objeto de dicha clase. Implemente en el fichero solution.py una nueva clase llamada Libro, que herede de la clase Documento, con las siguientes particularidades:
+
+Deberá disponer de una nueva propiedad de tipo string de lectura y escritura llamada isbn (identificador del libro).
+
+El inicializador deberá disponer, a continuación de los parámetros necesarios para la expresión constructora de los objetos de la clase Documento, de un parámetro adicional con el que deberá inicializar la propiedad isbn.
+
+Deberá definir el menor número de métodos mágicos para que dos objetos de la propia clase se puedan comparar usando los operadores <, <=, ==, !=, > y >=. Para ello se usarán las propiedades heredadas de Documento, de forma que se considerará menor el que tenga un valor menor para la propiedad título. A igual valor para título, se considerará menor el que tenga un valor menor para autor. Y si cada uno de los valores mencionados fueran respectivamente iguales para ambos objetos, estos se considerarán iguales entre sí. Una string se considerará menor (o igual) a otra de acuerdo con el criterio usual de comparación de strings.

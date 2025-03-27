@@ -1,0 +1,9 @@
+En el módulo functions se ha desarrollado una función llamada check_pass que admite un único parámetro de tipo string que se supone representa una posible password. El cometido de la función es comprobar que la password cumple lo siguiente:
+
+Si dicha string tiene una longitud entre 8 y 15 caracteres.
+Al menos una letra en minúscula.
+Al menos una letra en mayúscula.
+Al menos un dígito.
+En caso de que se cumplan todos los requisitos se devuelve true y false en caso de que no.
+
+Desarrolle en el módulo passwtests, una clase de prueba llamada PasswTests que implemente, usando unittest, los casos de prueba necesarios para probar la función check_pass descrita.
