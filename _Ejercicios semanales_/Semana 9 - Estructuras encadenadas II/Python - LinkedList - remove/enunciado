@@ -1,0 +1,1 @@
+Añada a la clase LinkedList que se proporciona un método llamado remove que admita como parámetro un valor que debe ser eliminado de la lista. El método eliminará todos los nodos que tengan un valor igual al pasado por parámetro.

@@ -1,0 +1,7 @@
+Implemente donde se indica en el código suministrado una nueva clase llamada DeletableSLL que herede de SortedLinkedList y que añada un único método, llamado delete, que admita como parámetro un valor a eliminar de la lista. El método eliminará todos los nodos que tengan un valor igual al pasado como parámetro.
+ 
+La lista deberá permanecer ordenada de menor a mayor en todo momento.
+ 
+Recuerde que, para acceder a los atributos ocultos de la superclase, necesitará usar mangled names:
+self._SortedLinkedList__first
+self._SortedLinkedList__len

@@ -1,0 +1,4 @@
+Una lista doblemente encadenada es una en la que cada nodo tiene una referencia al siguiente nodo, y también una referencia al anterior nodo de la lista. La figura muestra una lista doblemente encadenada vacía, una con un elemento y una con varios elementos (el valor se ha dibujado dentro del nodo por simplicidad):
+
+Se tiene una clase DoubleLinkedList diseñada para implementar una lista doblemente encadenada.
+Añada a la clase DoubleLinkedList un método llamado insert_as_first que tome un valor como parámetro y lo inserte como primer elemento de la lista.

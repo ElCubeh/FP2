@@ -1,0 +1,1 @@
+Añada a la clase LinkedList que se proporciona un método llamado contains que admita como parámetro un valor. El método devolverá True si el valor pasado como parámetro se encuentra en la lista, o False si no.
