@@ -1,0 +1,42 @@
+Gestión de Cuentas Bancarias 🏦
+Desarrolle en el módulo cuentabancaria una clase en Python de nombre CuentaBancaria que modele una cuenta bancaria básica, atendiendo a las siguientes características y requerimientos.
+
+Clase CuentaBancaria 💳
+Consideraciones generales
+Añada los atributos de instancia y de clase que considere necesarios para cumplir los requisitos solicitados.
+La clase debe construirse ocultando adecuadamente los atributos que se usen.
+No se requieren más comprobaciones que las indicadas.
+
+Inicializador (constructor): Recibe en una string el nombre del titular de la cuenta a crear. 
+
+Propiedades de instancia:
+
+codigo_cuenta (solo lectura): string, código de la cuenta; inmutable, con el formato "CB-nnn", donde nnn son tres cifras numéricas que se deberán ir asignando a las sucesivas cuentas conforme vayan creándose, empezando por 001 y siguiendo con 002, 003, etc. (se recomienda usar el formato :03d en una f-string). Si no se resolviera la generación automática, utilícese el código de cuenta "CB-001". 
+titular (solo lectura): string, nombre del titular de la cuenta.
+saldo (solo lectura): flotante, saldo actual de la cuenta (inicialmente, 0.0).
+
+Métodos de instancia:
+
+depositar(cantidad): Añade la cantidad al saldo, salvo si la cantidad fuera negativa, en cuyo caso se deberá lanzar una excepción ValueError.
+retirar(cantidad): Resta la cantidad al saldo, salvo si el saldo fuera insuficiente o la cantidad fuera negativa, en cuyo caso se deberá lanzar una excepción ValueError.
+
+Métodos de clase:
+
+obtener_total_cuentas(): Devuelve el número total de cuentas creadas.
+total_saldo_titular(titular): Devuelve la suma de los saldos de todas las cuentas del titular.
+Representación informal:
+
+Contendrá la información de la cuenta, siguiendo el formato:
+<código_cuenta> - Titular: <titular>, Saldo: <saldo>
+Por ejemplo, para el siguiente código se debe mostrar lo indicado:
+
+cuenta1 = CuentaBancaria('José Rodríguez')
+cuenta1.depositar(12)
+print(cuenta1)  # CB-001 - Titular: José Rodríguez, Saldo: 12.0
+cuenta2 = CuentaBancaria('Juan García')
+cuenta2.depositar(33)
+print(cuenta2)  # CB-002 - Titular: Juan García, Saldo: 33.0
+Pruebas
+Se dispone de un fichero prueba.py modificable para probar su clase al ejecutarlo.
+
+Notas: Se recomienda desplegar la pestaña Descripción justo antes de pulsar Evaluar, y desplegar también la pestaña Comentarios aun cuando se muestre algún mensaje en la de Compilación.
