@@ -1,0 +1,16 @@
+"""La siguiente función en Python sirve para calcular el enésino número de la sucesión de Fibonacci:
+
+def fibo(n):
+    Devuelve el n-ésimo número de Fibonacci
+    
+    a = 0
+    b = 1
+    
+    for i in range(n):
+        c = a + b
+        a = b
+        b = c
+        
+    return a
+Añada a la clase Functions, que se proporciona escrita en Java, una función pública de clase con el mismo nombre que la anterior y que realice la misma tarea. Tanto el parámetro de entrada como el valor devuelto por la función debrán ser de tipo int.
+"""

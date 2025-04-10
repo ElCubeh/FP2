@@ -1,0 +1,12 @@
+Desarrolle una función public static void llamada showNumbers que tome como parámetros dos números enteros y muestre, uno por línea y de menor a mayor, todos los números mayores o iguales que el primer número y menores o iguales que el segundo. Por ejemplo:
+
+Se pasa: 12, 17
+
+Se muestra:
+
+12
+13
+14
+15
+16
+17

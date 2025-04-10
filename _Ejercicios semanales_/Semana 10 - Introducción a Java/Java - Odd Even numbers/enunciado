@@ -1,0 +1,1 @@
+Añada a la clase OddEven un método de clase público llamado isOdd con un parámetro de tipo int. El método devolverá true si el número pasado como parámetro es impar, o false si es par.

@@ -1,7 +1,6 @@
 # ESCRIBA AQUÍ LA CLASE
 class CuentaBancaria:
-    _total_cuentas = 0
-    _cuentas_por_titular = {}
+    __titular_suma: dict[str, float] = {}
 
     def __init__(self, titular: str):
         self._titular = titular
