@@ -1,0 +1,3 @@
+Añada a la clase ArrayTools un método público de clase llamado mayores que acepte como parámetros un array myArray de elementos de tipo double y un valor  value de tipo double, y devuelva un resultado de tipo int.
+
+El método mayores devolverá el número de elementos de myArray que son mayores que value.

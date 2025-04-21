@@ -1,0 +1,27 @@
+La función desc_sorted(), escrita en Python, que se muestra a continuación, toma como parámetro una lista y devuelve una nueva lista que tiene todos los elementos de la original, pero ordenados en orden descendente.
+
+def desc_sorted(lista):
+    """Devuelve una copia de lista ordenada en orden descendente"""
+    
+    nueva = [0 for i in range(len(lista))]
+    colocados = 0
+    
+    for e in lista:
+        pos = 0
+
+        while (pos < colocados) and (e < nueva[pos]):
+            pos += 1
+        
+        for pos2 in range(colocados, pos, -1):
+            # Desplazamos para abrir hueco al nuevo elemento
+            nueva[pos2] = nueva[pos2 - 1]
+            
+        nueva[pos] = e
+        colocados += 1
+
+    return nueva
+Añada a la clase ArrayTools un método público de clase llamado descSorted que acepte como parámetro un array de elementos de tipo int y devuelva un nuevo array, con los mismos elementos que el original, pero ordenados en orden descendente, tal como en la función de Python mostrada arriba. El código de dicha función está diseñado pensando en facilitar su traducción a Java, no en obtener la solución óptima en Python.
+
+Recuerde que, para crear un array de elementos de tipo int de un tamaño predetermindado, incializado con ceros, en Java podemos simplemente escribir:
+
+int[] nuevo = int[tamaño];

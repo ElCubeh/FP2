@@ -1,0 +1,5 @@
+Añada a la clase ArrayTools un método público de clase llamado isSorted que acepte como parámetro un array de elementos de tipo int y devuelva un resultado de tipo boolean.
+
+El resultado será true si los elementos del array están ordenados en orden creciente y false si no lo están.
+
+Un array está ordenado en orden creciente si cada elemento, menos el primero, es mayor o igual que el anterior. Un array vacío, o con un solo elemento, se considera ordenado.

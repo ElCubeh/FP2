@@ -1,0 +1,14 @@
+La función symmetrical, escrita en Python, recibe como parámetro una lista de listas que representa una matriz cuadrada, y devuelve True si la matriz representada es simétrica, o False si no lo es. Una matriz cuadrada a
+ es simétrica si  a i j = a j i {\displaystyle a_{ij}=a_{ji}}  para todo  i,j
+.
+
+def symmetrical(numbers):
+    """Evalúa si una matriz es simétrica"""
+    
+    for i in range(len(numbers)):
+        for j in range(len(numbers[i])):
+            if numbers[i][j] != numbers[j][i]:
+                return False
+                
+    return True
+En la clase ArrayTools, desarrolle un método público de clase llamado symmetrical que realice la misma función en Java, recibiendo como parámetro un array de arrays de números de tipo int.

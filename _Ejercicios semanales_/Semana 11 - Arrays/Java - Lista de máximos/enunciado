@@ -1,0 +1,5 @@
+Añada a la clase ArrayTools un método público de clase llamado listsMaxs. El método tomará dos arrays de enteros y devolverá un núevo array de enteros. Los dos arrays pasados como parámetros son del mismo tamaño, y el array a devolver también lo será. El nuevo array se formará poniendo en cada posición el mayor de los dos valores que ocupan la misma posición en los arrays pasados como parámetros. Por ejemplo:
+
+int[] par1 = {10, 7, 98, 123, 45};
+int[] par2 = {12, 16, 14, 11, 22};
+int[] resu = {12, 16, 98, 123, 45};

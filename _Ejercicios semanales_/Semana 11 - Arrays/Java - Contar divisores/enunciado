@@ -1,0 +1,13 @@
+La función divisibles(), escrita en Python, que se muestra a continuación, toma como parámetros una lista de números enteros y un número entero distinto de cero. La función debe devolver cuántos de los números contenidos en la lista son divisibles por el número proporcionado como segundo parámetro.
+
+def divisibles(números, divisor):
+    """Devuelve el número de divisores dee num contenidos en lista"""
+    
+    contador = 0
+    
+    for n in números:
+        if n % divisor == 0:
+            contador += 1
+            
+    return contador
+Añada a la clase ArrayTools suministrada un método público de clase llamado divisibles que acepte como parámetros un array de elementos de tipo int y un valor de tipo int distinto de cero, y devuelva un resultado de tipo int que será la cuenta de cuantos de los números contenidos en el array son divisibles por el número proporcionado como segundo parámetro.

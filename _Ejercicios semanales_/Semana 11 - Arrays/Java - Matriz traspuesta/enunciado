@@ -1,0 +1,13 @@
+La función transpose, escrita en Python, recibe como parámetro una lista de listas que representa una matriz y devuelve una nueva lista de listas que represente la matriz traspuesta de la pasada como parámetro. La traspuesta de una matriz se obtiene cambiando las filas por columnas.
+
+def transpose(matriz):
+    """Traspone una matriz"""
+
+    result = [[0 for i in range(len(matriz))] for j in range(len(matriz[0]))]
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[0])):
+            result[j][i] = matriz[i][j]
+
+    return result
+En la clase ArrayTools, desarrolle un método público de clase llamado transpose, que realice la misma función en Java, recibiendo como parámetro un array de arrays de números de tipo int.
