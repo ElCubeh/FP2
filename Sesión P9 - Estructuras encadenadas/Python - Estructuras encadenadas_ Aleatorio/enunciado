@@ -1,0 +1,9 @@
+Añada a la clase LinkedList suministrada un método llamado filtrar(self). El método tiene que devolver una nueva LinkedList que con copias de todos los elementos de self que sean de tipo int, en el orden en que aparecen. Los elementos en la lista self pueden ser de cualquier tipo.
+
+Ejemplo 1:
+self: 4➔"hola"➔"esto"➔5➔3➔"es"➔7➔True➔7➔1
+nueva: 4➔5➔3➔7➔7➔1  (solo se copian los nodos con valores enteros)
+
+Ejemplo 2:
+self: "hola"➔"esto"➔"es"➔True
+nueva: LinkedList vacía  (ya que no había enteros originalmente)

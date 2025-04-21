@@ -1,0 +1,17 @@
+Información previa
+Una pila (stack en inglés) es una lista ordenada o estructura de datos que permite almacenar y recuperar datos, siendo el modo de acceso a sus elementos de tipo LIFO (del inglés Last In, First Out, «último en entrar, primero en salir»).
+
+ (Fuente: Wikipedia)
+
+Ejercicio:
+
+Implemente en el fichero stack.py la clase Stack usando listas encadenadas con las siguientes operaciones:
+Un inicializador para crear una pila vacía
+Una operación push() para añadir un elemento a la pila
+Una operación pop() para extraer de la pila y devolver el elemento más recientemente añadido
+Una propiedad top para obtener el elemento añadido más recientemente a la pila
+Un método is_empty() que devuelve True si la pila está vacía o False en caso contrario.
+Un método __len__() para obtener el número de elementos de las pila
+Los elementos de la pila se deben almacenar internamente en nodos de la lista encadenada.
+Implemente en el fichero stackexceptions.py una excepción llamada StackEmptyError que servirá para señalar las situaciones en las que se intenta realizar una operación no permitida en una pila vacía (desapilar o acceder a la propiedad top).
+Modifique las operaciones de la clase Stack para que lancen la excepción StackEmptyError en los casos pertinentes.
