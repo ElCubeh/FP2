@@ -1,0 +1,9 @@
+En el fichero container.py se ha comenzado a desarrollar en Python una clase llamada Container para implementar un tipo contenedor de lista encadenada. Para ello, incluye la definición de la clase Container.Node, que define el nodo básico de las listas.
+
+Usted debe completar la clase Container con los siguientes elementos:
+
+Un método de inicialización que inicialice el contenedor a vacío. Para ello, debe añadir dos atributos:
+Un atributo llamado first, que servirá para referenciar al primer nodo de la lista y se inicializará a None.
+Un atributo llamado last, que servirá para referenciar al último elemento de la lista y se inicializará a None.
+Un método llamado insert al que se le pasará un valor de cualquier tipo y lo insertará en un nodo al final de la lista que implementa el objeto Container.
+Un método llamado delete, sin parámetros, que eliminará de la lista todos los elementos que sean de tipo str.

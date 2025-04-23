@@ -1,0 +1,7 @@
+En el fichero container.py se ha comenzado a desarrollar en Python una clase llamada Container para implementar un tipo contenedor de lista encadenada, la cual habrá de estar compuesta de nodos de la clase Container.Node, clase cuya definición ya ha sido desarrollada. También se ha desarrollado un método inicializador y un método para insertar nuevos datos al final de la lista (para más detalle vea el código suministrado).
+
+Usted debe completar la clase Container con los siguientes elementos:
+
+Una propiedad de solo lectura denominada size que nos da cuantos datos hay en la lista.
+Un método denominado find_unique con un parámetro que devuelve verdadero si el parámetro pasado es un valor que solo se encuentra en un único nodo en la lista y devuelve falso en caso contrario.
+Un método llamado delete_all, con un parámetro que eliminará todos los nodos cuyo valor sea igual al parámetro pasado por parámetro.
