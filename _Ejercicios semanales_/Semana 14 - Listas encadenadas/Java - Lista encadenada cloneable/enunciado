@@ -1,0 +1,9 @@
+La clase ListOfInt representa objetos contenedores de números enteros implementados como listas simplemente encadenadas. Los objetos de la clase ListOfInt tienen dos campos protected: first, de tipo Node, que referencia al primer nodo de la lista encadenada, y length, de tipo int, que indica el número de elementos de la lista. Cuando la lista está vacía, el campo first tiene el valor null y el campo length el valor cero.
+
+Los nodos de la lista son objetos de la clase Node, que tiene dos campos public: data, de tipo int, que representa el valor del nodo, y next, de tipo Node, que hace referencia al siguiente nodo de la lista. El campo next del último nodo de la lista tiene el valor null.
+
+La clase ListOfInt tiene un constructor sin parámetros que crea una lista vacía e implementa la intefaz Cloneable, si bien hace una copia superficial.
+
+Desarrolle una nueva clase pública, llamada CloneableListOfInt que herede de la clase ListOfInt e implemente la interfaz Cloneable, haciendo una copia profunda que incluya los campos heredados de la superclase.
+
+Nota: es posible añadir a la clase métodos auxiliares así como un método main para ejecutar (pulsando en el cohete) pruebas propias.

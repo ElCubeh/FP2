@@ -1,0 +1,18 @@
+Se tiene ya desarrollada en Java una clase llamada code>Counter. Esta clase sirve para representar un contador que se inicializará con el valor entero 0, valor que se podrá incrementar de 1 en 1 invocando a un método sin parámetros llamado .step(). Además, tiene un método llamado .getValue() que devuelve el valor del contador en el momento en que se llama y un método llamado .reset() que repone el valor del contador a 0. En la clase Counter, el valor del contador se almacena en un atributo protected llamado count.
+Se pide desarrollar una nueva clase llamada SteppedCounter, heredera de Counter. Los objetos se inicializarán pasándoles un parámetro que indicará el valor del "paso" a incrementar en cada llamada a .step(). El valor inicial del contador será 0, igual que en la clase Counter.
+
+Debe redefinir el método .step() para que cuando se llame incremente el valor del contador en la cantidad indicada por el paso.
+
+Ejemplo:
+public class Main {
+    public static void main(String[] args) {
+        SteppedCounter count = new SteppedCounter(3);
+        System.out.println(count.getValue()); // Muestra 0
+        for (int i = 0; i < 5; i++) {      // Muestra 3 6 9 12 15 en líneas separadas
+            count.step();
+            System.out.println(count.getValue());
+        }
+        count.reset();
+        System.out.println(count.getValue());  // Muestra 0
+    }
+}

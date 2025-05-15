@@ -1,0 +1,5 @@
+Añada a la clase ArrayTools un método público de clase llamado palabrasEnMente que reciba un array de Strings y devuelva un nuevo array de strings. El array devuelto debe tener el mismo tamaño que el pasado como parámetro. El array pasado como parámetro contiene una lista de palabras. El array resultante contendrá las mismas palabras, excepto aquellas que terminen en "mente", que se modificarán eliminando ese sufijo.
+ 
+Por ejemplo:
+Entrada: {"El", "gato", "insolentemente", "saltaba", "ágilmente"}
+Salida: {"El", "gato", "insolente", "saltaba", "ágil"}

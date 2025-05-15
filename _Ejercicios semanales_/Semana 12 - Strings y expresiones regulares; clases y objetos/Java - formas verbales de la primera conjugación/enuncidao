@@ -1,0 +1,11 @@
+El presente de indicativo de los verbos regulares de la primera conjugación se conjuga sustituyendo la terminación "ar", por las terminaciones "o", "as", "a", "amos", "áis", "an"; por ejemplo:
+
+cantar: canto, cantas, canta, cantamos, cantáis, cantan
+
+Añada a la clase Functions que se proporciona escrita en Java una función pública de clase llamada verbs que tome como parámetro una string y devuelva una nueva string conteniendo todas las palabras así conjugadas que encuentre, concatenadas en orden de aparición y delimitadas por corchetes. Se supone que todas las palabras que tienen tales terminaciones corresponden a verbos regulares de la primera conjugación en presente de indicativo. Use expresiones regulares para resolver el problema.
+
+Por ejemplo:
+
+recibe: "Trabajo, Judit canta, vosotros nadáis y ellos bailan"
+
+devuelve: "[Trabajo][canta][nadáis][bailan]"

@@ -16,7 +16,7 @@ class LinkedList:
             self.__last.next_node = new_node
             self.__last = new_node
 
-    def agragar_adelante(self, value): #Añadir al principio de la lista
+    def agregar_adelante(self, value): #Añadir al principio de la lista
         new_node = self.Node(value)
         if not self.__first:
             self.__first = self.__last = new_node
@@ -24,19 +24,27 @@ class LinkedList:
             new_node.next_node = self.__first
             self.__first = new_node
 
-    def insertar_intermedia(self, valor):
-        nuevo = Nodo(valor)
-        actual = self.cabeza
-        while actual:
-            if isinstance(actual.valor, int):
-                # Insertar después del nodo actual
-                nuevo.siguiente = actual. siguiente
-                actual.siguiente = nuevo
-                return
-            actual = actual.siguiente
-        # Si no se encontró un entero, insertar al final
-        self.insertar_final(valor)
-    
+    def insert_middle(self, value):
+        new_node = self.Node(value)
+        if not self.__first:
+            # Si la lista está vacía, insertar como cabeza
+            self.__first = self.__last = new_node
+            return
+        current = self.__first
+        prev = None
+        while current and not isinstance(current.value, int):
+            prev = current
+            current = current.next_node
+        if current:
+            # Insertar después del primer entero
+            new_node.next_node = current.next_node
+            current.next_node = new_node
+            if not new_node.next_node:
+                self.__last = new_node
+        else:
+            self.__last.next_node = new_node
+            self.__last = new_node
+
     def mostrar(self):  #Enseñar en pantalla
         current = self.__first
         while current:
@@ -171,6 +179,6 @@ lista.append(2)
 lista.append(1)
 lista.append(3)
 lista.append(1)
-lista.agragar_adelante("Hola soy el primero")
+lista.agregar_adelante("Hola soy el primero")
 lista.eliminar(1)
 lista.mostrar()

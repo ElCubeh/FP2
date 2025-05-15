@@ -15,6 +15,7 @@ class LinkedList:
             self.next_node = None
     def __init__(self):
         self.__first = None
+        self.__last = None
     
     def insert_front(self, value):
         n_nodo = self.Node(value)

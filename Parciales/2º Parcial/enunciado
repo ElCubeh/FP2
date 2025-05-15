@@ -1,0 +1,52 @@
+🧑‍🤝‍🧑 Gestión de Grupos de Interés
+Se pide completar el desarrollo de la clase InterestGroup en el módulo networking. Cada objeto de la clase InterestGroup representa un grupo de personas con intereses comunes. Para almacenar los miembros del grupo se usará una lista encadenada. Se proporciona la clase interna Node que define las características de los nodos de la lista. Los miembros del grupo están representados por sus nombres (tipo str).
+
+La clase InterestGroup hereda de la clase ContainerBase, que define el método __str__, permitiendo mostrar la lista de miembros de forma sencilla.
+
+Tu tarea es completar el funcionamiento de la clase InterestGroup añadiendo atributos y modificando métodos que crea necesarios con el fin de desarrollar los siguientes métodos y propiedades dentro de la clase InterestGroup:
+
+✅ Métodos y propiedades a desarrollar:
+Método is_member
+Devuelve True si el nombre pasado por parámetro está en el grupo, False en caso contrario.
+
+Método add_member
+Añade un nuevo miembro (nombre pasado por parámetro) al grupo si no estaba previamente. Devuelve True si lo añade y False si no.
+
+Propiedad size
+Devuelve el número total de miembros del grupo.
+
+Método union
+Devuelve un nuevo grupo con la unión de miembros del grupo actual y el grupo recibido por parámetro (sin duplicados).
+
+Método remove_member
+Se le pasa un nombre por parámetro y lo elimina si está en el grupo. Devuelve True si lo elimina y False si no.
+
+🧠 Recomendaciones:
+Localice los errores en su código modificando y ejecutando el fichero prueba.py. El contenido de este fichero no se evalúa.
+Recuerda que la lista encadenada debe construirse sin usar listas nativas de Python.
+El orden de los miembros en el grupo no es relevante.
+🔄 Ejemplo de uso:
+group1 = InterestGroup()
+group2 = InterestGroup()
+
+group1.add_member("Ana")
+group1.add_member("Luis")
+group1.add_member("Marta")
+
+group2.add_member("Luis")
+group2.add_member("Carlos")
+group2.add_member("Elena")
+
+print(group1)
+# ➡️[Ana]->[Luis]->[Marta]->None
+
+print(group1.is_member("Luis")) # True
+print(group1.size) # 3
+
+union_group = group1.union(group2)
+print(union_group)
+# ➡️[Ana]->[Luis]->[Marta]->[Carlos]->[Elena]->None
+
+union_group.remove_member("Elena")
+print(union_group)
+# ➡️[Ana]->[Luis]->[Marta]->[Carlos]->None

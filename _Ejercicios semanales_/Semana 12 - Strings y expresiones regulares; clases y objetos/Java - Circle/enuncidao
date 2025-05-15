@@ -1,0 +1,6 @@
+Implemente una clase llamada Circle para representar para representar círculos. Esta clase deberá tener:
+
+Un constructor que admita un parámetro de tipo double que representa del radio del círculo.
+Dos métodos llamados getRadius y setRadius, para obtener y actualizar, respectivamente, el radio del círculo.
+Un método llamado area para obtener el área del círculo.
+Nota: Para calcular el área de un círculo debe usar la constante π, que en Java está definida en la clase Math como Math.PI

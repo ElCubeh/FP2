@@ -1,0 +1,19 @@
+La clase ListOfInt representa objetos contenedores de números enteros implementados como listas simplemente encadenadas. Los objetos de la clase ListOfInt tienen dos campos protected: first, de tipo Node, que referencia al primer nodo de la lista encadenada y length, de tipo int, que indica el número de elementos de la lista. Cuando la lista está vacía, el campo first tiene el valor null y el campo length el valor cero.
+
+Los nodos de la lista son objetos de la clase Node, que tiene dos campos public: data, de tipo int, que representa el valor del nodo y next, de tipo Node, que hace referencia al siguiente nodo de la lista. El campo next del último nodo de la lista tiene el valor null.
+
+La clase ListOfInt tiene un constructor sin parámetros que crea una lista vacía.
+
+La clase ListOfInt tiene definido el método toString(). La representación dada por toString() para una ListOfInt es la secuencia de valores que contiene, entre corchetes y separados por comas y espacios.
+
+Lista con varios nodos: [45, 7, 89, 10, 24]
+Lista vacía           : []
+Desarrolle una nueva clase pública de nombre ChildListOfInt que herede de la clase ListOfInt e implemente el método toString().
+
+La representación de toString() para una ChildListOfInt será su longitud entre paréntesis seguida, entre corchetes, por los valores almacenados en la lista separados entre si por una coma y un espacio. Por ejemplo:
+
+Lista con varios nodos: (5)[45, 7, 89, 10, 24]
+Lista vacía           : (0)[]
+La clase ChildListOfInt deberá, además, implementar un método llamado getLength, sin parámetros, que devolverá la longitud de la lista (de tipo int). Para la implementación de getLength() no debe usarse toString().
+ 
+Nota: es posible añadir a la clase métodos auxiliares así como un método main para ejecutar (pulsando en el cohete) pruebas propias.
