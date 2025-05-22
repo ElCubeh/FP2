@@ -1,0 +1,3 @@
+Un número primo es un número entero mayor que uno y que solo es divisible por 1 y por él mismo.
+
+Desarrolle, en el archivo Solution.java, un método (función) estático llamado isPrime para verificar si un entero pasado por parámetro es primo no devolviendo verdadero o falso según el caso. Desarrolle también en el archivo Solution.java, un método (función) estático llamado countPrimes que devuelva el número de número primos que exista en el intervalo desde 1 hasta el número entero pasado por parámetro.

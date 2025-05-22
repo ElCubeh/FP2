@@ -1,0 +1,21 @@
+Desarrolle, en el archivo Solution.java, los siguientes métodos (funciones) estáticos que muestren distintas figuras geométricas usando asteriscos.
+
+printTriangleRectangle, que imprime un triángulo rectángulo de una altura pasada por parámetro (int).
+*
+***
+*****
+*******
+*********
+printSquare, que imprime un cuadrado de una altura pasada por parámetro (int).
+*********
+*       *
+*       *
+*       *
+*********
+printPyramid, que imprime una "pirámide" de una altura pasada por parámetro (int).
+    *
+   ***
+  *****
+ *******
+*********
+Los anteriores ejemplos evidentemente son para un valor de altura igual a 5 líneas. Obsérvese que, como el ancho de línea es mayor que el de columna, cada línea horizontal requiere casi el doble de asteriscos. Todas las figuras de una misma altura deben compartir una misma base. Las figuras deberían poderse generar también para alturas pequeñas como 2, 1 e incluso 0.

@@ -1,0 +1,17 @@
+Un número palíndromo es aquel entero positivo que se lee igual de izquierda a derecha y de derecha a izquierda. Por ejemplo, el número 12321 es palíndromo porque, al invertirlo, se obtiene el mismo número.
+
+Desarrolle los siguientes métodos estáticos:
+
+Método isPalindrome:
+En el archivo Solution.java, desarrolle un método (función) estático llamado isPalindrome que reciba un número entero y devuelva true si dicho número es palíndromo o false en caso contrario.
+Sugerencia 1: Para invertir el número, utilice operaciones aritméticas (división entera y módulo). El módulo 10 (%) da el dígito más a la derecha de un número y la división por 10 quita dicho dígito. Teniendo en cuenta esto intente crear un número con los dígitos invertidos, si son iguales es palíndromo.
+Sugerencia 2: Convierta el número en String y compare parejas de caracteres (de los extremos al centro) para comprobar si es palíndromo. Puede usar Integer.toString(num) para obtener el número en forma de String y para acceder a cada carácter se debe usar el método charAt(posición).
+
+Método countPalindromes:
+En el mismo archivo Solution.java, desarrolle otro método (función) estático llamado countPalindromes que reciba un número entero n y devuelva la cantidad de números palíndromos que existen en el rango desde 1 hasta n.
+
+Ejemplos de comportamiento:
+
+isPalindrome(121) debería devolver true porque 121 es un palíndromo.
+isPalindrome(123) debería devolver false porque 123 no se lee igual al invertirlo.
+countPalindromes(150) debería devolver 23 que es la cantidad de números palíndromos en el rango de 1 a 150.

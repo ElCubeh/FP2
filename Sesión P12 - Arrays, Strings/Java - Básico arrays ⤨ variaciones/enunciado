@@ -1,0 +1,16 @@
+Añada a la clase ArrayTools un método public static int[] procesar(String[] v1, String[] v2). El método debe devolver un nuevo array de enteros cuyo tamaño será igual al del más corto de los dos arrays pasados como parámetros.
+
+Cada posición del nuevo array contendrá:
+
+Si el resultado de comparar, usando el método de la clase String compareTo(String other), la string contenida en esa posición de v1 con la contenida en la misma posición de v2 es mayor o igual que 0, la longitud de la string de v1.
+En otro caso, la longitud de la string en esa posición de v2.
+Nota: la longitud de una String se obtiene llamando al método length.
+
+Ejemplo:
+v1         = ["Aburrido",   "Alto", "Amargo",     "Azul",   "Bajo",  "Barato",  "Bonito"]
+v2         = [   "Ácido", "Alegre",  "Ancho", "Atrevido", "Blanco"]
+resultado  = [         5,        4,        5,          4,        6]
+El primer elemento del resultado es 5 ya que es la longitud de la primera string en v2 no siendo mayor o igual que 0 el resultado de la comparación de la primera string en v1 con la primera en v2, el siguiente elemento es 4 ya que es la longitud de la siguiente string en v1 y es mayor o igual que 0 el resultado de la comparación de la siguiente string en v1 con la siguiente string en v2, etc.
+Notas:
+
+Se permite añadir a la clase un método main para ejecutar pruebas propias siempre que no cause error de compilación.

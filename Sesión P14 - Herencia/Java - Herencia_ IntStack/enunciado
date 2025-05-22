@@ -1,0 +1,14 @@
+Se proporciona visible la clase IntContainer en lenguaje Java, pensada para derivar de ella clases que contengan un número variable de enteros. Dicha clase tiene dos atributos:
+
+data, de tipo array de enteros. Los elementos contenidos se almacenarán en el array. Por tanto, la capacidad de un IntContainer viene determinada por el tamaño de su array.
+size, de tipo entero. Este número deberá indicar el número actual de elementos contenidos.
+Se pide implementar dos nuevas clases:
+
+Una, de nombre CapacityOverflow, heredera de Exception. Esta excepción tendrá un constructor que admitirá un parámetro de tipo String para ser usado como mensaje de la excepción.
+
+Otra, de nombre IntStack, que herede de IntContainer. Esta clase deberá tener:
+
+Un constructor con un parámetro de tipo int, que inicialice el IntStack a la capacidad indicada por el parámetro, pero vacío.
+Un método de nombre insert, con un parámetro de tipo int, que añada, en la primera posición libre, el valor recibido por parámetro. Si ello no fuera posible, deberá lanzar la excepción CapacityOverflow con el mensaje "Contenedor lleno".
+Una sustitución del método toString que entregue entre llaves los valores, en orden de almacenamiento y separados por " - " ; por ejemplo: "{135 - 234 - 100 - 745 - 137 - 276 - 300}".
+Una sustitución del método equals. Dos objetos de tipo IntStack se consideran iguales si almacenan los mismos valores, en el mismo orden.
