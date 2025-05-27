@@ -1,0 +1,10 @@
+Un número racional se representa mediante una fracción compuesta de un numerador y un denominador, ambos números enteros. El denominador no puede tener el valor cero. Los números racionales se pueden, entre otras cosas, sumar, multiplicar y comparar.
+
+Desarrolle una clase pública llamada Rational para manejar números racionales. Esta clase tendrá:
+
+Un constructor que recibirá como parámetros dos números enteros que representarán, en este orden el numerador y el denominador del número racional a implementar.
+Un método público llamado add, que tomará como parámetro un objeto Rational y devolverá un nuevo objeto Rational que representará la suma del número racional representado por el objeto this y el representado por el parámetro.
+Un método público llamado prod, que tomará como parámetro un objeto Rational y devolverá un nuevo objeto Rational que representará la multiplicación del número racional representado por el objeto this y el representado por el parámetro.
+Redefinirá el método toString de manera que para un Rarional con denominador n y denominador d, devuelva la string "a / d", por ejemplo "4 / 3" (nótense los espacios a ambos lados de la barra).
+Redefinirá el método equals para evaluar la igualdad entre el número representado por this y el pasado como parámetro.
+Sin importar como se hayan recibido los parámetros del constructor, la representación interna del número debe ser de tal forma que el numerador y denominador no tengan factores comunes, y que este último sea positivo. Se proporciona ya implementado el método public int Tools.mcd(int a, int b), que devuelve el máximo común divisor de a y b, y por tanto permite fácilmente eliminar factores comunes.

@@ -1,0 +1,15 @@
+Se encuentra parcialmente desarrollada una clase llamada Rectangulo para representar rectángulos en el plano (dos dimensiones) con lados paralelos a los ejes x e y. Para ello, se utilizan dos puntos que corresponden a las posiciones del vértice inferior izquierdo y del vértice superior derecho.
+
+![alt text](image.png)
+
+Se dispone además de una clase llamada Punto, que permite almacenar las coordenadas x e y de un punto. Usando apropiadamente la clase Punto, añadir los siguientes métodos a la clase Rectangulo:
+
+base, que deberá devolver la base del rectángulo.
+altura, que deberá devolver la altura del rectángulo.
+perimetro, que deberá devolver el perímetro del rectángulo.
+reescalar, que recibe por parámetro un factor numérico de reescalado y deberá modificar el rectángulo representado en el objeto de forma que sus lados cambien proporcionalmente; por ejemplo, si se le pasa un 2.4, las longitudes de su base y de su altura deberán resultar efectivamente multiplicadas por dicha cantidad. Se deberá mantener la posición de su punto inferior izquierdo, modificando únicamente el de la esquina superior derecha.
+toString, que deberá devolver una cadena representando el rectángulo en la que aparezcan entre < y > una representación de los puntos de las dos esquinas indicadas separados por , (coma y espacio). Cada punto se representará por sus valores de x e y entre paréntesis y separados a su vez por , (coma y espacio).
+Por ejemplo, para Rectangulo(new Punto(-1, 2.5), new Punto(3, 4)), deberá devolver "<(-1, 2.5), (3, 4)>". Obsérvese que Punto ofrece a su vez un método toString().
+Ejemplo de uso:
+Si creamos un objeto Rectangulo con dos objetos Punto de coordenadas (2, 3) y (3, 4), obtendremos un perímetro de 4, así como la representación "<(2, 3), (3, 4)>" devuelta por toString().
+Después de reescalar dicho objeto con el factor 1.5, su perímetro pasará a 6.0 y su nueva representación devuelta por toString() será "<(2, 3), (3.5, 4.5)>".
