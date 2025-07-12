@@ -1,0 +1,43 @@
+🛒 Gestión de Cola en un Supermercado 
+Se pide finalizar el desarrollo de la clase CheckoutQueue del módulo supermarket. Cada objeto de dicha clase representa la cola de clientes de una caja en un supermercado. Se proporciona la clase Client completada; y la clase CheckoutQueue por completar que ya incluye un constructor básico y una clase interna Node a usar para los nodos de la lista encadenada conteniendo los clientes de la cola. 
+
+Cada objeto de la clase Client representa a un cliente empleando dos atributos públicos: name para el nombre y total_cost para el total a pagar por su compra.
+
+Para completar la clase CheckoutQueue deberás desarrollar los siguientes métodos y propiedades (pudiendo para ello añadir o modificar sus actuales atributos o métodos si fuera necesario):
+
+✅ Métodos y propiedades a desarrollar:
+Método enqueue 
+Representa la llegada de un cliente (recibido por parámetro) a la cola, añadiéndolo por el final.
+
+Método dequeue
+Representa el que un cliente ha pasado por caja. Para ello, quita el cliente que estaba al principio de la cola y lo devuelve. Además, ha de actualizar apropiadamente lo ingresado en esa caja desde que se abrió su cola. Devuelve None si no había cliente en la cola.
+
+Propiedad daily_sales
+Esta propiedad de solo lectura nos devuelve lo ingresado en esa caja desde que se abrió la cola.
+
+Método split
+Este método está pensado para que los clientes de la cola pasen a ser atendidos en dos cajas. Para ello crea una nueva cola y la devuelve tras repartir los clientes, de forma que:
+
+La cola original conservará los clientes de posiciones pares (0, 2, 4, ...),
+
+La nueva cola contendrá los clientes de posiciones impares (1, 3, 5, ...),
+
+Manteniendo en ambas el orden relativo original de sus clientes.
+
+🧠 Recomendaciones:
+Localice los errores en su código modificando y ejecutando el fichero prueba.py. El contenido de este fichero no se testea, pero si contiene errores de compilación puede impedir la ejecución de las pruebas.
+La clase CheckoutQueue hereda de la clase ContainerBase, cuyo método __str__ nos facilita la visualización de la cola.
+Despliegue la pestaña Descripción justo antes de pulsar Evaluar.
+Despliegue la pestaña Comentarios aun cuando se muestre algún mensaje en la de Compilación ya que en comentarios aparecerán el resultado de las pruebas realizadas.
+🔄 Ejemplo de uso:
+cola = CheckoutQueue()
+print(cola) # ➡️None⬅️
+cola.enqueue(Client("Ana", 35))
+cola.enqueue(Client("Luis", 50))
+cola.enqueue(Client("Marta", 25))
+print(cola) # ➡️[Ana: 35]->[Luis: 50]->[Marta: 25]⬅️->None
+print(cola.dequeue()) # Ana: 35
+print(cola.dequeue()) # Luis: 50
+print(cola.daily_sales) # 85
+print(cola) # ➡️[Marta: 25]⬅️->None
+Nota: las flechas señalan los nodos referenciados por los atributos first y last, mientras que -> representa a next. 

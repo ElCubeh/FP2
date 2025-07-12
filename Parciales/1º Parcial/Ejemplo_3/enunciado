@@ -1,0 +1,43 @@
+ Clase TarjetaTransporte 🚍
+Desarrolle en el módulo transporte una clase en Python de nombre TarjetaTransporte que modele una tarjeta recargable de transporte público, con las siguientes características y requerimientos:
+
+Clase TarjetaTransporte 🎫
+Consideraciones generales
+Añada los atributos de instancia y de clase que considere necesarios.
+Los atributos deben estar encapsulados correctamente.
+No se requieren más validaciones que las indicadas.
+Inicializador (constructor)
+Recibe el nombre del usuario titular de la tarjeta (string).
+Propiedades de instancia
+numero_tarjeta (solo lectura): string, código único con formato "TT-nnnnnnn", donde nnnnnnn son números consecutivos con siete cifras empezando por 1000001 (sigue 1000002, 1000003, ...).
+titular (solo lectura): nombre del usuario.
+saldo (solo lectura): float, saldo disponible (inicialmente 0.0).
+viajes_realizados (solo lectura): entero, número de viajes realizados con la tarjeta (inicialmente 0).
+Métodos de instancia
+recargar(cantidad): Añade la cantidad al saldo, salvo que sea negativa, en cuyo caso lanza una excepción ValueError.
+viajar(costo_viaje): Descuenta el costo del viaje del saldo. Además, incrementa en 1 los viajes realizados por el titular con dicha tarjeta. Si no hay saldo suficiente o el costo es negativo, solo lanza una excepción ValueError.
+Métodos de clase
+total_tarjetas_emitidas(): Devuelve cuántas tarjetas han sido creadas. en total
+viajes_titular(nombre_titular): Devuelve el número total de viajes realizados con cualquier tarjeta por el titular. Si no ha tenido tarjetas 0.
+Representación informal
+La representación informal de la tarjeta será una str con el siguiente formato:
+<numero_tarjeta> - Titular: <titular>, Saldo: <saldo>, Viajes: <numero_viajes>
+Donde <numero_tarjeta> es el número de tarjeta,  <titular> es el titular de la tarjeta y <numero_viajes> es el número de viajes realizados con la tarjeta.
+Para una tarjeta se podría tener la siguiente representación informal:
+TT-1000031 - Titular: Ana López, Saldo: 1.5, Viajes: 2
+Ejemplo de uso
+
+    t1 = TarjetaTransporte("Ana López")
+    t1.recargar(20.0)
+    t1.viajar(2.5)
+    t1.viajar(2.5)
+    print(t1)
+    # TP-1000001 - Titular: Ana López, Saldo: 15.0, Viajes: 2
+    t2 = TarjetaTransporte("Carlos Ruiz")
+    t2.recargar(10.0)
+    print(t2)
+    # TP-1000002 - Titular: Carlos Ruiz, Saldo: 10.0, Viajes: 0
+🧪 Pruebas
+Se dispone de un fichero prueba.py modificable para probar su clase al ejecutarlo.
+
+Notas: Se recomienda desplegar la pestaña Descripción justo antes de pulsar Evaluar, y desplegar también la pestaña Comentarios aun cuando se muestre algún mensaje en la de Compilación.

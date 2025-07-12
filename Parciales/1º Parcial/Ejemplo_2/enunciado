@@ -1,0 +1,40 @@
+Clase Libro para gestión de Biblioteca 📚
+Desarrolle en el módulo libro una clase en Python de nombre Libro para gestionar libros en una biblioteca, atendiendo a las siguientes características y requerimientos.
+
+Clase Libro 📕
+Consideraciones generales
+Añada los atributos de instancia y de clase que considere necesarios para cumplir los requisitos solicitados.
+La clase debe construirse ocultando adecuadamente los atributos que se usen.
+No se requieren más comprobaciones que las indicadas.
+Inicializador (constructor): Recibe el título, el autor y el año de publicación del libro; por este orden. Los libros al inicializarse no están prestados.
+
+Propiedades:
+
+titulo: (solo lectura) string, título del libro.
+autor: (solo lectura) string, autor del libro.
+fecha: (solo lectura) año de publicación del libro.
+prestado: (lectura/escritura) indica si el libro está prestado (True) o no (False), pudiendo modificarse (salvo que el valor a asignar no fuera booleano, debiendo entonces lanzar la excepción ValueError).
+Métodos de instancia:
+
+prestar(): para marcar el libro como prestado (debe lanzar la excepción ValueError si el libro ya estuviera prestado).
+devolver(): para marcar el libro como devuelto (debe lanzar la excepción ValueError si el libro no estuviera prestado).
+
+Métodos de clase:
+
+total_libros(): devuelve el número de libros creados.
+publicados_autor(autor): devuelve el número de libros creados de tal autor.
+
+Representación informal:
+
+Contendrá la información del libro, indicando además si está disponible o prestado; todo ello con el formato siguiente (las comillas mostradas han de formar parte del resultado):
+"<titulo>" por <autor> (<fecha>) - <Disponible/Prestado>
+Por ejemplo, el siguiente código se debe mostrar lo indicado:
+
+libro1 = Libro('Cien años de soledad', 'Gabriel García Márquez', 1967)
+print(libro1)  # "Cien años de soledad" por Gabriel García Márquez (1967) - Disponible
+libro.prestar()
+print(libro1)  # "Cien años de soledad" por Gabriel García Márquez (1967) - Prestado
+Pruebas
+Se dispone de un fichero prueba.py modificable para probar su clase al ejecutarlo.
+
+Notas: Se recomienda desplegar la pestaña Descripción justo antes de pulsar Evaluar, y desplegar también la pestaña Comentarios aun cuando se muestre algún mensaje en la de Compilación.

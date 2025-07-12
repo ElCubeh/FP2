@@ -1,0 +1,50 @@
+📝 Registro de Tareas Pendientes
+Se pide completar el desarrollo de la clase TaskList para gestionar una lista de tareas pendientes. Cada tarea está representada por un objeto de la clase Task que se suministra, la cual dispone de dos atributos: name (una cadena de texto) y duration (un entero que representa el tiempo estimado en minutos que requiere la tarea). Para facilitar el mostrado de la lista, la clase TaskList hereda de la clase BaseContainer permitiendo el mostrado del contenido de la lista.
+
+Las tareas en los objetos TaskList se almacenarán internamente mediante una lista enlazada (no se permite el uso de listas nativas de Python). Se proporciona la clase interna Nodo que define los elementos de esta lista enlazada. Cada nodo almacena una tarea.
+
+Debes completar el código de la clase TaskList añadiendo los atributos y métodos necesarios para que cumpla con las siguientes funcionalidades:
+
+✅ Métodos y propiedades a desarrollar:
+Método add_task
+Añade una nueva tarea pasada por parámetro al final de la lista.
+
+Método get_task
+Devuelve la tarea que se encuentra en la posición pasada por parámetro (comenzando desde 0). Si la posición no es válida, devuelve None.
+
+Método task_completed
+Elimina y devuelve la tarea en la posición dada como parámetro, si existe. Esta acción debe considerar la propiedad time_expent. Devuelve None si la posición es incorrecta.
+
+Propiedad de solo lectura time_left
+Devuelve el tiempo total (en minutos) de todas las tareas pendientes en la lista.
+
+Propiedad de solo lectura time_spent
+Devuelve el tiempo total que se ha dedicado a las tareas completadas.
+
+🧠 Recomendaciones:
+No se permite el uso de listas nativas para almacenar las tareas.
+
+Asegúrate de manejar correctamente los índices fuera de rango.
+
+Puedes usar un script de prueba (por ejemplo, prueba.py) para verificar el funcionamiento de tu implementación, su contenido no será evaluado.
+
+El orden de las tareas en la lista es relevante: siempre se insertan al final y se accede por posición.
+
+🔄 Ejemplo de uso:
+t1 = Task("Lavar los platos", 15)
+t2 = Task("Hacer la compra", 40)
+t3 = Task("Estudiar Python", 120)
+
+lista = TaskList()
+lista.add_task(t1)
+lista.add_task(t2)
+lista.add_task(t3)
+print(lista) # ➡️[Lavar los platos: 15 min]->[Hacer la compra: 40 min]->[Estudiar Python: 120 min]->None
+
+print(lista.get_task(1))       # Hacer la compra: 40 min
+print(lista.time_left)         # 175
+
+print(lista.task_completed(1)) # Hacer la compra: 40 min
+print(lista) # ➡️[Lavar los platos: 15 min]->[Estudiar Python: 120 min]->None
+print(lista.time_left)         # 135
+print(lista.time_spent)        # 40
