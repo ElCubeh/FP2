@@ -1,0 +1,70 @@
+Se debe implementar una clase TaskList en Java para gestionar una lista de tareas pendientes, utilizando una lista simplemente enlazada.
+
+Cada tarea se representa mediante un objeto de la clase Task. Las tareas se almacenan en objetos de la clase TaskList, que hereda de una clase base TaskListBase ya desarrollada. Esta clase base incluye el uso de nodos (Node) para almacenar las tareas en una lista enlazada; y proporciona métodos básicos para agregar, consultar y mostrar tareas.
+
+✅ Clases disponibles
+
+Clase Task
+Representa una tarea ya realizada o por realizar.
+Constructor con dos parámetros para establecer los atributos name y duration.
+Atributos:
+name: string con el nombre de la tarea.
+duration: entero con la duración estimada en minutos.
+Clase Node
+Representa un nodo en la lista enlazada.
+Constructor con un parámetro para establecer el atributo value.
+Atributos:
+value: un objeto Task.
+next: referencia al siguiente nodo.
+Clase TaskListBase
+Atributo:
+protected first. De tipo Node, representando el inicio de la lista de nodos almacenando tareas.
+Métodos disponibles:
+addTask(Task task). Añade una nueva tarea pasada por parámetro al final de la lista.
+getTask(int index). Devuelve la tarea que se encuentra en la posición pasada por parámetro (comenzando desde 0). Si la posición no es válida, devuelve null.
+getSize(). Devuelve el número de tareas actualmente en la lista.
+toString(). Devuelve una String que representa la lista de tareas.
+🧩Clase a desarrollar: TaskList (hereda de TaskListBase)
+
+Se deben desarrollar los siguientes métodos, añadiendo los atributos que se consideren necesarios para ello:
+
+Método taskCompleted(int index)
+Ha de eliminar la tarea en la posición dada, considerando que se le ha dedicado el tiempo previsto, por lo que, además, ha de actualizar el tiempo total en minutos ya dedicado a las tareas completadas que han pasado por la lista. Devuelve la tarea completada (o null si el índice es inválido).
+Método getTimeLeft()
+Devuelve el tiempo total (en minutos) de todas las tareas pendientes en la lista.
+Método getTimeSpent()
+Devuelve el tiempo que se ha dedicado a las tareas completadas en esta lista de tareas.
+Método de clase getTotalTimeSpent()
+Devuelve el tiempo total en minutos dedicado a tareas completadas de todas las listas de tareas (TaskList) que hayan sido creadas. 
+Método getTaskArray()
+Devuelve un array con todos los objetos Task que se encuentran en la lista enlazada, y en el mismo orden. 
+🧠 Notas y recomendaciones:
+
+Salvo lo necesario para el método getTaskArray(), para almacenar las tareas únicamente deben usarse nodos enlazados (no se permite el uso de estructuras como ArrayList, LinkedList ni otras colecciones nativas de Java).
+El informe de evaluación le proporciona el código empleado en cada caso y el error encontrado: error de compilación 🐞, fallo en los resultados❌ , tiempo límite superado ⏰, etc.
+Localice los errores en su código modificando y ejecutando el fichero Pruebas.java. Note que puede copiar y pegar código desde el resultado de la evaluación. El contenido de este fichero no se evalúa.
+El orden de las tareas en la lista es relevante: siempre se insertan al final y algunos métodos acceden por posición.
+El tipo de prueba de evaluación empleado en este ejercicio puede requerir más de 20 segundos.
+🔄 Ejemplo de uso:
+
+
+Task t1 = new Task("Lavar los platos", 15);
+Task t2 = new Task("Hacer la compra", 40);
+Task t3 = new Task("Estudiar Java", 120);
+Task t4 = new Task("Estudiar Python", 150);
+TaskList lista1 = new TaskList();
+TaskList lista2 = new TaskList();
+lista1.addTask(t1);
+lista1.addTask(t2);
+lista1.addTask(t3);
+lista2.addTask(t4);
+System.out.println(lista1);                  // ➡️[Lavar los platos: 15 min]->[Hacer la compra: 40 min]->[Estudiar Java: 120 min]->null
+System.out.println(lista1.getTask(1));       // Hacer la compra: 40 min
+System.out.println(lista1.getTimeLeft());    // 175
+System.out.println(lista1.taskCompleted(1)); // Hacer la compra: 40 min
+System.out.println(lista1);                  // ➡️[Lavar los platos: 15 min]->[Estudiar Java: 120 min]->null
+System.out.println(lista1.getTimeLeft());    // 135
+System.out.println(lista1.getTimeSpent());   // 40
+System.out.println(lista1.getTotalTimeSpent()); // 40
+System.out.println(lista2.getTask(1));       // Estudiar Pyrhon: 150 min
+System.out.println(lista1.getTotalTimeSpent()); // 190

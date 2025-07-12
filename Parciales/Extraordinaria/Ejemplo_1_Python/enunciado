@@ -1,0 +1,73 @@
+Se debe implementar una clase TaskList en Python para gestionar una lista de tareas pendientes, utilizando una lista simplemente enlazada.
+
+Cada tarea se representa mediante un objeto de la clase Task. Las tareas se almacenan en objetos de la clase TaskList, que hereda de una clase base TaskListBase ya desarrollada. Esta clase base incluye el uso de nodos (Node) para almacenar las tareas en una lista enlazada; y proporciona métodos básicos para agregar, consultar y mostrar tareas.
+
+✅ Clases disponibles
+
+Clase Task
+Representa una tarea ya realizada o por realizar.
+Inicializador con dos parámetros para establecer los atributos name y duration.
+Atributos:
+name: string con el nombre de la tarea.
+duration: entero con la duración estimada en minutos.
+Clase Node
+Representa un nodo en la lista enlazada.
+Inicializador con un parámetro para establecer el atributo value.
+Atributos:
+value: un objeto Task.
+next: referencia al siguiente nodo.
+Clase TaskListBase
+Clase base que gestiona parcialmente la estructura de la lista enlazada.
+Atributo:
+first: referencia al primer nodo de la lista.
+Métodos disponibles:
+addTask(task): añade la nueva tarea en un nodo al final de la lista encadenada.
+getTask(index): devuelve la tarea en la posición indicada (o None si el índice no es válido); como es usual index=0 indica la posición inicial.
+getSize(): devuelve el número de tareas actualmente en la lista.
+__str__(): devuelve una representación en string de la lista de tareas.
+🧩 Clase a desarrollar: TaskList (hereda de TaskListBase)
+
+Se deben desarrollar los siguientes métodos, añadiendo los atributos que se consideren necesarios para ello:
+
+Método task_completed(index)
+Ha de eliminar la tarea en la posición dada, considerando que se le ha dedicado el tiempo previsto, por lo que, además, ha de actualizar el tiempo total en minutos ya dedicado a las tareas completadas que han pasado por la lista. Devuelve la tarea completada (o None si el índice es inválido).
+Propiedad time_left (solo lectura)
+Representa la suma del tiempo en minutos necesario para realizar las tareas pendientes actualmente en la lista.
+Propiedad time_spent (lectura y escritura)
+Representa el tiempo en minutos dedicado a tareas completadas en esta lista. Se le puede asignar un 0 (para reponer el tiempo dedicado), pero no se realiza ninguna acción si se intenta asignar otro valor.
+Método de clase get_total_time_spent()
+Devuelve el tiempo total en minutos dedicado a tareas completadas de todas las listas de tareas (TaskList) que hayan sido creadas.
+Método get_task_list()
+Devuelve una lista (list de Python) de los objetos Task que se encuentran en la lista enlazada, y en el mismo orden.
+🧠 Notas: 
+
+Salvo lo necesario para el método get_task_list(), para almacenar las tareas únicamente deben usarse nodos enlazados: no se deben utilizar ni listas de Python, ni estructuras de datos avanzadas.
+El informe de evaluación le proporciona el código empleado en cada caso y el error encontrado: error de compilación 🐞, fallo en los resultados❌ , tiempo límite superado ⏰, etc.
+Localice los errores en su código modificando y ejecutando el fichero Pruebas.py. Note que puede copiar y pegar código desde el resultado de la evaluación. El contenido de este fichero no se evalúa.
+El orden de las tareas en la lista es relevante: siempre se insertan al final y algunos métodos acceden por posición.
+🔄 Ejemplo de uso:
+
+t1 = Task("Lavar los platos", 15)
+t2 = Task("Hacer la compra", 40)
+t3 = Task("Estudiar Java", 120)
+t4 = Task("Estudiar Python", 150)
+
+lista1 = TaskList()
+lista2 = TaskList()
+
+lista1.addTask(t1)
+lista1.addTask(t2)
+lista1.addTask(t3)
+lista2.addTask(t4)
+
+print(lista1)                         # ➡️[Lavar los platos: 15 min]->[Hacer la compra: 40 min]->[Estudiar Java: 120 min]->null
+print(lista1.getTask(1))              # Hacer la compra: 40 min
+print(lista1.getTimeLeft())           # 175
+print(lista1.taskCompleted(1))        # Hacer la compra: 40 min
+print(lista1)                         # ➡️[Lavar los platos: 15 min]->[Estudiar Java: 120 min]->null
+print(lista1.getTimeLeft())           # 135
+print(lista1.getTimeSpent())          # 40
+print(TaskList.getTotalTimeSpent())   # 40
+print(lista2.getTask(1))              # None
+print(lista2.taskCompleted(0))        # Estudiar Python: 150 min
+print(TaskList.getTotalTimeSpent())   # 190

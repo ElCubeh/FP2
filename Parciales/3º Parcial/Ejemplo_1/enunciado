@@ -1,0 +1,55 @@
+🧑‍🤝‍🧑 Gestión de Grupos de Interés
+Se pide construir la clase InterestGroup en Java. Cada objeto de dicha clase representa un grupo de personas que comparten un cierto interés.
+
+Los miembros de un grupo se almacenarán empleando lista encadenada. Para ello, la clase InterestGroup habrá de heredar de la clase ContainerBase. Esta suministra el atributo first de la clase Node, que referencia el inicio de la lista. Además, define el método toString(), lo que nos permite visualizar fácilmente los miembros.
+
+Los objetos de la clase Node (véase su código suministrado) representan los nodos de la lista. Disponen de dos atributos: value, de tipo String (a usar para almacenar el nombre del miembro), y next, de tipo Node (a usar para referenciar el siguiente de la lista).
+
+Para construir la clase InterestGroup deberás desarrollar los siguientes métodos (pudiendo añadir otros métodos y atributos que fueran adecuados):
+
+✅ Métodos a desarrollar:
+Método isMember
+Habrá de devolver true si el nombre pasado por parámetro está en el grupo; false en caso contrario.
+
+Método addMember
+Deberá añadir un nuevo miembro (nombre pasado por parámetro) al grupo si no estaba previamente, devolviendo true si lo añade, y false si no.
+
+método getSize
+Habrá de devolver el número de miembros del grupo.
+
+Método union
+Habrá de devolver un nuevo grupo conteniendo tanto los miembros del propio grupo como los del grupo recibido por parámetro, evitando duplicados.
+
+Método removeMember
+Deberá eliminar del grupo, si estuviera, el miembro de nombre recibido por parámetro, devolviendo true . De lo contrario, deberá devolver false.
+
+🧠 Notas y recomendaciones:
+El informe de evaluación le proporciona el código empleado en cada caso y el error encontrado: error de compilación 🐞, fallo en los resultados❌ , tiempo límite superado ⏰, etc.
+Localice los errores en su código modificando y ejecutando el fichero Pruebas.java. Note que puede copiar y pegar código desde el resultado de la evaluación. El contenido de este fichero no se evalúa.
+El tipo de prueba de evaluación empleado en este ejercicio puede requerir más de 20 segundos.
+El orden de los miembros en el grupo no es relevante.
+🔄 Ejemplo de uso:
+        InterestGroup group1 = new InterestGroup();
+        InterestGroup group2 = new InterestGroup();
+
+        group1.addMember("Ana");
+        group1.addMember("Luis");
+        group1.addMember("Marta");
+
+        group2.addMember("Luis");
+        group2.addMember("Carlos");
+        group2.addMember("Elena");
+
+        System.out.println(group1);
+        // ➡️ [Marta]->[Luis]->[Ana]->null (El orden no es relavante)
+
+        System.out.println(group1.isMember("Luis")); // true
+        System.out.println(group1.getSize()); // 3
+
+        InterestGroup unionGroup = group1.union(group2);
+        System.out.println(unionGroup);
+        // ➡️ [Elena]->[Carlos]->[Marta]->[Luis]->[Ana]->null (El orden no es relavante)
+
+        unionGroup.remove_member("Elena");
+        System.out.println(unionGroup);
+        // ➡️ [Carlos]->[Marta]->[Luis]->[Ana]->null
