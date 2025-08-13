@@ -1,17 +1,17 @@
-
+from networking import InterestGroup
 
 class InterestGroup():
 
     class Node:
-        def __init__(self, value, next=None):
+        def __init__(self, value:str, next=None)-> None:
             self.value = value
             self.next = next
 
-    def __init__(self):
+    def __init__(self)->None:
         self.first = None
         self._size = 0
 
-    def is_member(self, name):
+    def is_member(self, name:str)-> bool:
         current = self.first  
         while current:
             if current.value == name:
@@ -19,7 +19,7 @@ class InterestGroup():
             current = current.next
         return False
 
-    def add_member(self, name):
+    def add_member(self, name:str) -> bool:
         if self.is_member(name):
             return False
         new_node = self.Node(name)
@@ -34,10 +34,10 @@ class InterestGroup():
         self._size += 1
         return True     #añadir primero
     @property
-    def size(self):
+    def size(self) -> int:
         return self._size
     
-    def copy(self):
+    def copy(self)-> InterestGroup:
         new_group = InterestGroup()
         new_group.add_member(self.first.value)
         current = self.first.next
@@ -47,7 +47,7 @@ class InterestGroup():
         return new_group
 
 
-    def union(self, other_group):
+    def union(self, other_group:InterestGroup) -> InterestGroup:
         new_group = self.copy()
         current = other_group.first
         while current:
@@ -55,7 +55,7 @@ class InterestGroup():
             current = current.next
         return new_group
 
-    def remove_member(self, name):
+    def remove_member(self, name:str) -> bool:
         current = self.first  
         prev = None
         while current:
@@ -75,7 +75,7 @@ class InterestGroup():
             current = current.next
         return False
     
-    def __str__(self):
+    def __str__(self)-> str:
         current = self.first
         result = ""
         while current:

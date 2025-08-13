@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Java - Fibonacci" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Kilómetros a millas" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Números en rango" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Odd Even numbers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - anterior y siguiente" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - perímetro de un rectángulo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - sumar dos números" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - área de un rectángulo" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

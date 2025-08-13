@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Java - Array is sorted_" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Concatenar array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Contar divisores" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Contar mayores" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Lista de máximos" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Matriz simétrica" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Matriz traspuesta" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Ordenar descendente" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - Sumar listas" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java - zip" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
