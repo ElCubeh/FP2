@@ -1,51 +1,56 @@
 // Desarrolle aquí su código
 public class TaskList extends TaskListBase {
-    private int timeSpent;
+    
+    // Variable de clase para el tiempo total de TODAS las listas
     private static int totalTimeSpent = 0;
-
+    
+    // Tiempo dedicado en ESTA lista
+    private int timeSpent = 0;
+    
     public TaskList() {
         super();
-        this.timeSpent = 0;
     }
 
     public Task taskCompleted(int index) {
-        if (index < 0 || first == null) {
+        if (index < 0 || index >= size) {
             return null;
         }
-        
-        Node current = first;
+
         Node prev = null;
-        int count = 0;
-        
-        while (current != null && count != index) {
+        Node current = head;
+        int pos = 0;
+
+        while (current != null && pos < index) {
             prev = current;
             current = current.next;
-            count++;
+            pos++;
         }
-        
+
         if (current == null) {
-            return null;
+            return null; // índice fuera de rango
         }
-        
-        Task completedTask = current.value;
-        int duration = completedTask.duration;
-        
+
+        // Eliminar el nodo
         if (prev == null) {
-            first = first.next;
+            head = current.next;
         } else {
             prev.next = current.next;
         }
-        
-        timeSpent += duration;
-        totalTimeSpent += duration;
+        size--;
+
+        // Actualizar tiempos
+        Task completedTask = current.data;
+        timeSpent += completedTask.getTime();
+        totalTimeSpent += completedTask.getTime();
+
         return completedTask;
     }
 
     public int getTimeLeft() {
         int total = 0;
-        Node current = first;
+        Node current = head;
         while (current != null) {
-            total += current.value.duration;
+            total += current.data.getTime();
             current = current.next;
         }
         return total;
@@ -60,12 +65,11 @@ public class TaskList extends TaskListBase {
     }
 
     public Task[] getTaskArray() {
-        int size = getSize();
         Task[] tasks = new Task[size];
-        Node current = first;
-        int index = 0;
+        Node current = head;
+        int i = 0;
         while (current != null) {
-            tasks[index++] = current.value;
+            tasks[i++] = current.data;
             current = current.next;
         }
         return tasks;
