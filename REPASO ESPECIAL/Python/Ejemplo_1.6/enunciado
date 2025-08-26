@@ -1,0 +1,25 @@
+Examen 6: Sistema de Tickets de Soporte
+Enunciado:
+Desarrolla una clase TicketQueue para gestionar una cola de tickets de soporte técnico. Los tickets (Ticket) se organizarán en una lista enlazada. La clase hereda de TicketQueueBase.
+
+Clases y Atributos Base:
+
+Clase Ticket:
+
+Atributos: customer_name (string), issue (string), priority (entero, 1-5).
+
+Clase TicketQueueBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_ticket(ticket), get_ticket(index), get_size().
+
+Funcionalidades a Desarrollar en TicketQueue:
+
+Método resolve_ticket(index): Resuelve y elimina el ticket en la posición index. Devuelve el Ticket resuelto y actualiza un contador de tickets resueltos para esta cola.
+
+Propiedad pending_tickets (solo lectura): Devuelve el número de tickets actualmente en la cola.
+
+Método get_highest_priority_ticket(): Recorre la lista y devuelve el objeto Ticket con el valor de priority más alto (asumamos que 5 es la máxima prioridad), sin eliminarlo de la lista.
+
+Método de clase get_total_resolved_tickets(): Devuelve el número total de tickets resueltos en todas las colas (TicketQueue) creadas.

@@ -1,0 +1,25 @@
+Examen 10: Planificador de Viajes
+Enunciado:
+Implementa una clase TripPlanner para organizar una lista de destinos a visitar en un viaje. Los destinos (Destination) se gestionarán mediante una lista enlazada. La clase hereda de TripPlannerBase.
+
+Clases y Atributos Base:
+
+Clase Destination:
+
+Atributos: city (string), country (string), days_to_stay (entero).
+
+Clase TripPlannerBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_destination(destination), get_destination(index), get_size().
+
+Funcionalidades a Desarrollar en TripPlanner:
+
+Método visit_destination(index): Simula la visita a un destino. Elimina el destino de la posición index y lo devuelve. Además, actualiza un contador con el total de días de viaje completados.
+
+Propiedad total_trip_duration (solo lectura): Devuelve el número total de días planeados para los destinos pendientes.
+
+Propiedad days_traveled (lectura y escritura): Representa el total de días ya viajados en este plan. Debe poder ser reseteado a 0.
+
+Método de clase get_all_traveled_days(): Devuelve el número total de días viajados sumando los de todos los TripPlanner creados.

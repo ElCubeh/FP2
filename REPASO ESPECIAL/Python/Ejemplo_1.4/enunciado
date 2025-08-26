@@ -1,0 +1,25 @@
+Examen 4: Carrito de Compras E-commerce
+Enunciado:
+Crea una clase ShoppingCart para simular un carrito de compras online. El carrito gestionará una lista de artículos (Item) mediante una lista enlazada y heredará de una clase ShoppingCartBase.
+
+Clases y Atributos Base:
+
+Clase Item:
+
+Atributos: product_name (string), unit_price (float), quantity (entero).
+
+Clase ShoppingCartBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_item(item), get_item(index), get_size().
+
+Funcionalidades a Desarrollar en ShoppingCart:
+
+Método remove_item(index, quantity_to_remove): Elimina quantity_to_remove unidades de un artículo en la posición index. Si la cantidad del artículo llega a 0 o menos, el artículo se elimina por completo de la lista. Devuelve el objeto Item modificado o el original si fue eliminado.
+
+Propiedad subtotal (solo lectura): Calcula y devuelve el coste total de todos los artículos en el carrito (suma de unit_price * quantity).
+
+Propiedad total_items (solo lectura): Devuelve la cantidad total de unidades de productos en el carrito (la suma de quantity de todos los Item).
+
+Método de clase get_all_carts_value(): Devuelve la suma del subtotal de todos los carritos (ShoppingCart) creados.

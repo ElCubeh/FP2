@@ -1,0 +1,25 @@
+Examen 9: Lista de Contactos
+Enunciado:
+Desarrolla una clase ContactList para gestionar una lista de contactos personales. Cada contacto (Contact) se almacenará en una lista enlazada. La clase hereda de ContactListBase.
+
+Clases y Atributos Base:
+
+Clase Contact:
+
+Atributos: name (string), phone_number (string), is_favorite (booleano).
+
+Clase ContactListBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_contact(contact), get_contact(index), get_size().
+
+Funcionalidades a Desarrollar en ContactList:
+
+Método remove_contact_by_name(name): Busca y elimina el primer contacto que coincida con el name proporcionado. Devuelve el objeto Contact eliminado o None si no se encuentra.
+
+Propiedad favorite_count (solo lectura): Devuelve el número de contactos marcados como favoritos (is_favorite es True).
+
+Método get_favorites(): Devuelve una lista de Python (list) con todos los contactos que son favoritos.
+
+Método de clase get_total_contacts(): Devuelve el número total de contactos almacenados en todas las listas de contactos (ContactList) existentes.

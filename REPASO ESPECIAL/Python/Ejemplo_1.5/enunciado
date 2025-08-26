@@ -1,0 +1,25 @@
+Examen 5: Registro de Rutina de Ejercicios
+Enunciado:
+Implementa una clase WorkoutLog para registrar los ejercicios de una rutina de entrenamiento. Los ejercicios (Exercise) se almacenarán en una lista enlazada. La clase WorkoutLog hereda de WorkoutLogBase.
+
+Clases y Atributos Base:
+
+Clase Exercise:
+
+Atributos: name (string), duration (minutos), calories_burned (entero).
+
+Clase WorkoutLogBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_exercise(exercise), get_exercise(index), get_size().
+
+Funcionalidades a Desarrollar en WorkoutLog:
+
+Método complete_exercise(index): Marca un ejercicio como completado, eliminándolo de la lista de pendientes. Devuelve el objeto Exercise completado.
+
+Propiedad remaining_time (solo lectura): Devuelve la suma de la duración de todos los ejercicios pendientes en el registro.
+
+Propiedad total_calories (solo lectura): Devuelve el total de calorías quemadas de los ejercicios completados en esta instancia de WorkoutLog.
+
+Método de clase get_global_calories_burned(): Devuelve la suma de calorías quemadas de todos los ejercicios completados en todas las instancias de WorkoutLog.

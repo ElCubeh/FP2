@@ -1,0 +1,25 @@
+Examen 2: Sistema de Inventario de Tienda
+Enunciado:
+Implementa una clase Inventory para gestionar el inventario de productos de una tienda. El sistema usará una lista enlazada para almacenar objetos de la clase Product. La clase Inventory heredará de InventoryBase, que provee la gestión básica de la lista.
+
+Clases y Atributos Base:
+
+Clase Product:
+
+Atributos: name (string), price (float), quantity (entero).
+
+Clase InventoryBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_product(product), find_product(name), get_size().
+
+Funcionalidades a Desarrollar en Inventory:
+
+Método sell_product(name, amount): Busca un producto por su name. Si lo encuentra y la cantidad es suficiente, reduce el quantity del producto en amount. Si la cantidad llega a cero, elimina el producto de la lista. Devuelve el valor total de la venta (price * amount) o 0 si la venta no es posible.
+
+Propiedad inventory_value (solo lectura): Calcula y devuelve el valor total del inventario (la suma de price * quantity de todos los productos).
+
+Atributo de clase total_revenue: Un atributo de clase (no un método) que almacena la suma de los ingresos de todas las ventas realizadas en todas las instancias de Inventory.
+
+Método get_low_stock_products(threshold): Devuelve una lista de Python (list) con los productos cuya cantidad (quantity) sea inferior o igual a threshold.

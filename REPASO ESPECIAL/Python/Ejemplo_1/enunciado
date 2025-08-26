@@ -1,0 +1,28 @@
+Examen 1: Gestor de Playlist Musical
+Enunciado:
+Debes implementar una clase Playlist para gestionar una lista de reproducción de canciones. La clase utilizará una lista simplemente enlazada para almacenar objetos de la clase Song. La clase Playlist debe heredar de una clase base PlaylistBase que ya proporciona la estructura de nodos (Node) y los métodos básicos para agregar, consultar y mostrar canciones.
+
+Clases y Atributos Base:
+
+Clase Song:
+
+Atributos: title (string), artist (string), duration (entero en segundos).
+
+
+Clase PlaylistBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_song(song), get_song(index), get_size().
+
+
+
+Funcionalidades a Desarrollar en Playlist:
+
+Método play_song(index): Simula la reproducción de una canción. Elimina la canción de la posición dada y la devuelve. Además, debe actualizar un contador con la duración total de la música reproducida en esa playlist.
+
+Propiedad total_duration (solo lectura): Devuelve la suma de la duración (en segundos) de todas las canciones pendientes en la playlist.
+
+Método de clase get_total_played_time(): Devuelve la duración total (en segundos) de todas las canciones reproducidas en todas las instancias de Playlist creadas.
+
+Método get_playlist_as_list(): Devuelve una lista de Python (list) con los objetos Song de la playlist, en el mismo orden.

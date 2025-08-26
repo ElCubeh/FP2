@@ -1,0 +1,25 @@
+Examen 8: Libro de Recetas Digital
+Enunciado:
+Implementa una clase RecipeBook para gestionar una colección de recetas de cocina. Las recetas (Recipe) se guardan en una lista enlazada. La clase hereda de RecipeBookBase.
+
+Clases y Atributos Base:
+
+Clase Recipe:
+
+Atributos: name (string), cooking_time_min (entero), servings (entero).
+
+Clase RecipeBookBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_recipe(recipe), get_recipe(index), get_size().
+
+Funcionalidades a Desarrollar en RecipeBook:
+
+Método remove_recipe(index): Elimina una receta de la posición index y la devuelve.
+
+Propiedad average_cooking_time (solo lectura): Calcula y devuelve el tiempo de cocción promedio de todas las recetas en el libro. Si no hay recetas, devuelve 0.
+
+Método find_recipes_for_servings(num_servings): Devuelve una lista de Python (list) con todas las recetas que son para num_servings personas.
+
+Atributo de clase total_recipes_created: Un contador que se incrementa cada vez que se añade una nueva receta a cualquier libro de recetas (RecipeBook).

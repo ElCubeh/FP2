@@ -1,0 +1,25 @@
+Examen 7: Gestor de Descargas de Archivos
+Enunciado:
+Crea una clase DownloadManager que gestione una cola de descargas de archivos. Los archivos (FileDownload) se almacenan en una lista enlazada. La clase hereda de DownloadManagerBase.
+
+Clases y Atributos Base:
+
+Clase FileDownload:
+
+Atributos: file_name (string), file_size_mb (float), url (string).
+
+Clase DownloadManagerBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: queue_download(file), get_download(index), get_size().
+
+Funcionalidades a Desarrollar en DownloadManager:
+
+Método finish_download(index): Finaliza una descarga, eliminando el archivo de la cola en la posición index. Devuelve el FileDownload y actualiza el total de MB descargados en este gestor.
+
+Propiedad total_queued_size (solo lectura): Devuelve la suma del tamaño (file_size_mb) de todos los archivos en la cola de descarga.
+
+Propiedad downloaded_mb (lectura y escritura): Almacena los megabytes totales descargados. Permite que su valor sea reiniciado a 0.
+
+Método de clase get_global_downloaded_mb(): Devuelve la suma total de megabytes descargados en todos los DownloadManager.

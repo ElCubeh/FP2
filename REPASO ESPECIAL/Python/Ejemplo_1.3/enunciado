@@ -1,0 +1,25 @@
+Examen 3: Gestor de Préstamos de Biblioteca
+Enunciado:
+Desarrolla una clase Library para administrar los libros disponibles para préstamo. Los libros, representados por la clase Book, se almacenarán en una lista enlazada. La clase Library hereda de una clase base LibraryBase.
+
+Clases y Atributos Base:
+
+Clase Book:
+
+Atributos: title (string), author (string), pages (entero).
+
+Clase LibraryBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_book(book), get_book(index), get_size().
+
+Funcionalidades a Desarrollar en Library:
+
+Método checkout_book(index): Presta un libro. Elimina el libro en la posición index de la lista de disponibles y lo devuelve. Además, actualiza un contador con el número total de páginas de los libros prestados de esa biblioteca.
+
+Propiedad total_pages_available (solo lectura): Devuelve la suma total de las páginas de todos los libros actualmente en la biblioteca.
+
+Propiedad borrowed_pages (lectura y escritura): Representa el total de páginas de libros prestados de esta instancia. Se puede asignar a 0 para resetear el contador, pero no se realiza ninguna acción si se intenta asignar otro valor.
+
+Método de clase get_total_books_borrowed(): Devuelve el número total de libros que han sido prestados en todas las instancias de Library.
