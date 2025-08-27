@@ -1,0 +1,41 @@
+Examen 6: Registro de Transacciones Bancarias
+Enunciado:
+Crea una clase AccountLedger para registrar las transacciones de una cuenta bancaria. Las transacciones (Transaction) se almacenarán en una lista enlazada simple. Hereda de la clase base LedgerBase.
+
+Clase Transaction:
+
+Atributos:
+
+description: String.
+
+amount: double (positivo para depósitos, negativo para retiros).
+
+Constructor: Recibe description y amount.
+
+Clase LedgerBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+addTransaction(Transaction tx): Añade una transacción al final.
+
+getTransaction(int index): Devuelve una transacción por su posición.
+
+Clase a desarrollar: AccountLedger (hereda de LedgerBase)
+
+Atributos:
+
+initialBalance: double con el saldo inicial de la cuenta.
+
+totalFeesApplied: static double para rastrear las comisiones totales aplicadas en todas las cuentas.
+
+Métodos a implementar:
+
+getCurrentBalance(): Calcula y devuelve el saldo actual sumando el initialBalance y el amount de todas las transacciones.
+
+getDeposits(): Devuelve un array con todas las transacciones cuyo amount sea positivo.
+
+getLargestWithdrawal(): Devuelve la Transaction con el amount negativo de mayor magnitud (el más bajo).
+
+applyFee(double feeAmount, String description): Añade una nueva transacción de retiro (negativa) por el valor de la comisión y actualiza totalFeesApplied.

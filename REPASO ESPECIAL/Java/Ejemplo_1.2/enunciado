@@ -1,0 +1,45 @@
+Examen 2: Catálogo de Biblioteca Digital
+Enunciado:
+Implementa una clase Catalog para administrar una colección de libros en una biblioteca. Los libros se almacenarán en una lista enlazada simple de objetos Book. La clase Catalog heredará de CatalogBase, que ofrece funcionalidades básicas.
+
+Clase Book:
+
+Atributos:
+
+isbn: String con el ISBN del libro.
+
+title: String con el título.
+
+author: String con el autor.
+
+isCheckedOut: boolean que indica si el libro está prestado.
+
+Constructor: Recibe isbn, title y author. Inicializa isCheckedOut a false.
+
+Clase CatalogBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+addBook(Book book): Añade un libro al final del catálogo.
+
+findBookByTitle(String title): Busca y devuelve un libro por su título.
+
+Clase a desarrollar: Catalog (hereda de CatalogBase)
+
+Atributos:
+
+checkedOutCount: int para contar los libros prestados en esta instancia de catálogo.
+
+totalLibraryLoans: static int para contar el total de préstamos realizados en todos los catálogos.
+
+Métodos a implementar:
+
+checkoutBook(String isbn): Busca un libro por isbn. Si lo encuentra y no está prestado, lo marca como isCheckedOut, actualiza los contadores (checkedOutCount, totalLibraryLoans) y devuelve el Book. Si no, devuelve null.
+
+returnBook(String isbn): Busca un libro por isbn, lo marca como no prestado (isCheckedOut = false) y actualiza el contador checkedOutCount.
+
+getAvailableBooks(): Devuelve un array de objetos Book que no están prestados (isCheckedOut es false).
+
+countBooksByAuthor(String author): Devuelve el número de libros en el catálogo escritos por un autor específico.

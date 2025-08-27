@@ -1,0 +1,41 @@
+Examen 8: Sistema de Votación
+Enunciado:
+Implementa un sistema de votación simple con la clase VotingSystem. Cada voto se representa como un objeto Vote en una lista enlazada. La clase extiende VotingSystemBase.
+
+Clase Vote:
+
+Atributos:
+
+candidateName: String.
+
+voterId: int.
+
+Constructor: Recibe candidateName y voterId.
+
+Clase VotingSystemBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+castVote(Vote vote): Registra un nuevo voto.
+
+getVoteCount(): Devuelve el número total de votos emitidos.
+
+Clase a desarrollar: VotingSystem (hereda de VotingSystemBase)
+
+Atributos:
+
+invalidatedVotes: int para el número de votos anulados en esta instancia.
+
+totalValidVotesCast: static long para el número total de votos válidos en todos los sistemas.
+
+Métodos a implementar:
+
+countVotesFor(String candidateName): Devuelve el número de votos que ha recibido un candidato específico.
+
+getWinner(): Determina y devuelve el String con el nombre del candidato que tiene más votos. Si hay un empate, devuelve "Tie".
+
+invalidateVotes(int voterId): Elimina todos los votos emitidos por un voterId específico y actualiza el contador invalidatedVotes. Devuelve el número de votos eliminados.
+
+getVotersList(): Devuelve un array de int con los voterId de todas las personas que han votado (sin duplicados).

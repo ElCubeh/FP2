@@ -1,0 +1,48 @@
+
+Examen 1: Gestor de Inventario de Tienda
+Enunciado:
+Se debe implementar una clase Inventory en Java para gestionar el inventario de productos de una tienda. La gestión se realizará a través de una lista simplemente enlazada de objetos Product. La clase Inventory debe heredar de una clase base InventoryBase que ya proporciona la estructura de nodos y las operaciones básicas.
+
+Clase Product:
+
+Atributos:
+
+productId: int con el identificador único del producto.
+
+name: String con el nombre del producto.
+
+quantity: int con la cantidad en stock.
+
+price: double con el precio unitario.
+
+Constructor: Recibe productId, name, quantity y price.
+
+Clase InventoryBase (Proporcionada):
+
+Atributo: protected first (un Node que apunta al inicio de la lista).
+
+Métodos:
+
+addProduct(Product product): Añade un nuevo producto al final de la lista.
+
+getProduct(int index): Devuelve el producto en una posición dada.
+
+getSize(): Devuelve el número de tipos de productos en el inventario.
+
+Clase a desarrollar: Inventory (hereda de InventoryBase)
+
+Atributos:
+
+totalRevenue: double para registrar los ingresos totales de esta instancia de inventario.
+
+totalProductsSold: static int para registrar el número total de unidades de producto vendidas en todos los inventarios.
+
+Métodos a implementar:
+
+sellProduct(int productId, int quantity): Busca un producto por su productId. Si lo encuentra y hay suficiente stock, reduce la cantidad, actualiza totalRevenue y totalProductsSold. Devuelve el valor total de la venta (quantity * price) o 0.0 si la venta no es posible.
+
+getTotalInventoryValue(): Devuelve el valor total del inventario (la suma de quantity * price para cada producto).
+
+restockProduct(int productId, int quantity): Busca un producto por su productId y aumenta su quantity. Devuelve true si el producto existe, false en caso contrario.
+
+getProductsBelowStock(int threshold): Devuelve un array de objetos Product cuya cantidad (quantity) sea inferior al umbral (threshold

@@ -1,0 +1,43 @@
+Examen 9: Seguimiento de Paquetes
+Enunciado:
+Crea una clase PackageTracker para seguir el estado de varios paquetes. Cada paquete (Package) se almacena en una lista enlazada. La clase hereda de TrackerBase.
+
+Clase Package:
+
+Atributos:
+
+trackingNumber: String.
+
+destination: String.
+
+status: String (ej: "In Transit", "Delivered").
+
+Constructor: Recibe trackingNumber y destination, inicializa status a "In Transit".
+
+Clase TrackerBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+addPackage(Package pkg): Añade un nuevo paquete.
+
+findPackage(String trackingNumber): Devuelve un paquete basado en su número de seguimiento.
+
+Clase a desarrollar: PackageTracker (hereda de TrackerBase)
+
+Atributos:
+
+deliveredCount: int para contar los paquetes entregados en esta instancia.
+
+totalPackagesShipped: static int para el número total de paquetes añadidos a todos los sistemas de seguimiento.
+
+Métodos a implementar:
+
+updateStatus(String trackingNumber, String newStatus): Actualiza el estado de un paquete. Si el nuevo estado es "Delivered", incrementa deliveredCount. Devuelve true si se actualizó.
+
+getDeliveredPackages(): Devuelve un array de Package cuyo estado sea "Delivered".
+
+countPackagesByDestination(String destination): Devuelve el número de paquetes que se dirigen a un destino específico.
+
+removeDelivered(): Elimina todos los paquetes que ya han sido entregados de la lista.

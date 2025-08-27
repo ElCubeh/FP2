@@ -1,0 +1,43 @@
+Examen 4: Sistema de Registro de Estudiantes
+Enunciado:
+Desarrolla una clase StudentRegistry para gestionar una lista de estudiantes en un curso. Utiliza una lista enlazada de objetos Student y hereda de una clase RegistryBase.
+
+Clase Student:
+
+Atributos:
+
+studentId: String.
+
+fullName: String.
+
+grade: double (calificación, inicializada en -1.0 para indicar "no calificado").
+
+Constructor: Recibe studentId y fullName.
+
+Clase RegistryBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+addStudent(Student student): Añade un estudiante.
+
+getSize(): Devuelve el número de estudiantes.
+
+Clase a desarrollar: StudentRegistry (hereda de RegistryBase)
+
+Atributos:
+
+gradedStudentsCount: int que cuenta cuántos estudiantes de esta lista ya tienen una calificación.
+
+highestGradeEver: static double que almacena la nota más alta registrada en cualquier registro.
+
+Métodos a implementar:
+
+assignGrade(String studentId, double grade): Busca un estudiante por studentId. Si lo encuentra, le asigna la calificación, actualiza gradedStudentsCount y highestGradeEver (si corresponde). Devuelve true si tiene éxito.
+
+calculateAverageGrade(): Devuelve la calificación promedio de todos los estudiantes que han sido calificados (grade != -1.0).
+
+removeStudent(String studentId): Elimina a un estudiante de la lista a partir de su studentId. Devuelve el Student eliminado.
+
+getStudentsWithoutGrade(): Devuelve un array de objetos Student que aún no tienen una calificación asignada.

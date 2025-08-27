@@ -1,0 +1,43 @@
+Examen 7: Planificador de Eventos
+Enunciado:
+Desarrolla una clase Scheduler que organiza una lista de eventos del día. Los eventos (Event) se guardan en una lista enlazada. La clase hereda de SchedulerBase.
+
+Clase Event:
+
+Atributos:
+
+eventName: String.
+
+startTime: int (hora de inicio, formato 24h, ej: 9 para 9:00, 14 para 14:00).
+
+duration: int (duración en minutos).
+
+Constructor: Recibe eventName, startTime y duration.
+
+Clase SchedulerBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+addEvent(Event event): Añade un evento al final de la lista.
+
+getSize(): Devuelve el número de eventos.
+
+Clase a desarrollar: Scheduler (hereda de SchedulerBase)
+
+Atributos:
+
+totalMinutesScheduled: int para la suma de duraciones de todos los eventos en este planificador.
+
+totalEventsCancelled: static int para el número total de eventos cancelados en todos los planificadores.
+
+Métodos a implementar:
+
+cancelEvent(String eventName): Busca un evento por su nombre, lo elimina de la lista, actualiza totalMinutesScheduled y totalEventsCancelled. Devuelve el Event cancelado.
+
+getTotalScheduledTime(): Devuelve totalMinutesScheduled.
+
+findEventAtTime(int time): Devuelve el primer Event que esté ocurriendo a una hora específica (time). Un evento está ocurriendo si startTime <= time < endTime.
+
+getEventsAfter(int time): Devuelve un array de objetos Event que comienzan a partir de la hora especificada.

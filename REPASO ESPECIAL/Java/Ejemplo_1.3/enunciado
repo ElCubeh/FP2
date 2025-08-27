@@ -1,0 +1,43 @@
+Examen 3: Gestor de Playlists de Música
+Enunciado:
+Crea una clase Playlist que gestione una lista de reproducción de canciones. Las canciones se representarán como objetos Song en una lista enlazada. La clase debe extender PlaylistBase.
+
+Clase Song:
+
+Atributos:
+
+title: String.
+
+artist: String.
+
+duration: int (duración en segundos).
+
+Constructor: Recibe title, artist y duration.
+
+Clase PlaylistBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+addSong(Song song): Añade una canción al final.
+
+getSong(int index): Obtiene la canción en la posición index.
+
+Clase a desarrollar: Playlist (hereda de PlaylistBase)
+
+Atributos:
+
+totalTimePlayed: int con el tiempo total (en segundos) de las canciones eliminadas de esta playlist.
+
+totalSongsPlayedGlobally: static int para el número total de canciones reproducidas en todas las playlists.
+
+Métodos a implementar:
+
+playSong(int index): Elimina la canción en la posición index de la lista, actualiza totalTimePlayed con su duración y también el contador estático totalSongsPlayedGlobally. Devuelve la Song eliminada o null si el índice es inválido.
+
+getTotalDurationLeft(): Devuelve la suma de las duraciones de todas las canciones que quedan en la playlist.
+
+getSongsByArtist(String artist): Devuelve un array de Song que coincidan con el artista proporcionado.
+
+moveSong(int fromIndex, int toIndex): Mueve una canción de una posición a otra en la lista. Devuelve true si la operación fue exitosa.

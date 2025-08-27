@@ -1,0 +1,43 @@
+Examen 5: Bandeja de Entrada de Correos
+Enunciado:
+Implementa una clase Inbox para simular una bandeja de entrada de correos electrónicos. Los correos (Email) se gestionan en una lista enlazada. La clase debe heredar de InboxBase.
+
+Clase Email:
+
+Atributos:
+
+sender: String.
+
+subject: String.
+
+isRead: boolean.
+
+Constructor: Recibe sender y subject, e inicializa isRead a false.
+
+Clase InboxBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+receiveEmail(Email email): Añade un email al final de la lista.
+
+getEmail(int index): Devuelve el email en la posición index.
+
+Clase a desarrollar: Inbox (hereda de InboxBase)
+
+Atributos:
+
+unreadCount: int para el número de correos no leídos en esta bandeja.
+
+totalSpamDeleted: static int para el número de correos marcados como spam eliminados en todas las bandejas.
+
+Métodos a implementar:
+
+markAsRead(int index): Marca el email en la posición index como leído (isRead = true) y actualiza unreadCount. Devuelve el Email modificado.
+
+deleteReadEmails(): Elimina todos los correos de la lista que hayan sido leídos. Devuelve la cantidad de correos eliminados.
+
+searchBySender(String sender): Devuelve un array de objetos Email enviados por un remitente específico.
+
+markAsSpamAndDrop(int index): Elimina el correo en la posición index, actualiza totalSpamDeleted y unreadCount (si no estaba leído). Devuelve el Email eliminado.

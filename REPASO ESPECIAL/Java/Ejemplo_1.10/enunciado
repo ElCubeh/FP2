@@ -1,0 +1,43 @@
+Examen 10: Log de Errores de Aplicación
+Enunciado:
+Desarrolla una clase ErrorLog que gestione un registro de errores de una aplicación. Los errores (AppError) se mantienen en una lista enlazada. Extiende la clase LogBase.
+
+Clase AppError:
+
+Atributos:
+
+errorCode: int.
+
+errorMessage: String.
+
+priority: String ("LOW", "MEDIUM", "HIGH").
+
+Constructor: Recibe los tres atributos.
+
+Clase LogBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos:
+
+logError(AppError error): Añade un error al final del log.
+
+getError(int index): Devuelve el error en la posición index.
+
+Clase a desarrollar: ErrorLog (hereda de LogBase)
+
+Atributos:
+
+resolvedErrorsCount: int para el número de errores resueltos en este log.
+
+totalCriticalErrors: static int para el número de errores con prioridad "HIGH" en todos los logs.
+
+Métodos a implementar:
+
+resolveError(int errorCode): Busca el primer error con el errorCode dado, lo elimina de la lista y actualiza resolvedErrorsCount. Devuelve el AppError resuelto.
+
+getHighPriorityErrors(): Devuelve un array de AppError cuya prioridad sea "HIGH".
+
+countErrorsByCode(int errorCode): Devuelve cuántas veces aparece un error con un código específico en el log.
+
+clearLowPriorityErrors(): Elimina todos los errores con prioridad "LOW" del log. Devuelve el número de errores eliminados.
