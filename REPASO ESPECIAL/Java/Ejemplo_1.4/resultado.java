@@ -1,133 +1,146 @@
-public class StudentRegistry extends RegistryBase{
+/**
+ * La clase StudentRegistry gestiona una lista de estudiantes en un curso.
+ * Hereda de RegistryBase para la funcionalidad básica de la lista.
+ * Añade métodos para asignar calificaciones, calcular promedios, y más.
+ */
+public class StudentRegistry extends RegistryBase {
+
+    // --- ATRIBUTOS ---
+
+    /**
+     * Almacena el número de estudiantes en ESTE registro que ya tienen una
+     * calificación asignada (diferente de -1.0).
+     */
     private int gradedStudentsCount = 0;
-    private static double highestGradeEver = 0;
+
+    /**
+     * Almacena la calificación más alta registrada en CUALQUIER instancia
+     * de StudentRegistry. Es 'static', por lo que es compartida globalmente.
+     */
+    private static double highestGradeEver = 0.0;
+
+
+    // --- MÉTODOS IMPLEMENTADOS ---
+
+    /**
+     * Asigna una calificación a un estudiante, buscándolo por su ID.
+     * Actualiza los contadores de estudiantes calificados y la nota más alta.
+     *
+     * @param studentId El ID del estudiante a calificar.
+     * @param grade     La calificación a asignar.
+     * @return true si el estudiante fue encontrado y calificado, false si no.
+     */
     public boolean assignGrade(String studentId, double grade) {
-    Node current = first; // Empezamos el recorrido.
-
-    while (current != null) {
-        // 1. Obtenemos el objeto Student del nodo actual.
-        Student student = current.value;
-
-        // 2. Comparamos el studentId del estudiante actual con el que buscamos.
-        if (student.studentId.equals(studentId)) {
-            // ¡Estudiante encontrado!
-
-            // 3. Comprobamos si era la primera vez que lo calificábamos.
-            if (student.grade == -1.0) {
-                this.gradedStudentsCount++; // Si es así, incrementamos el contador.
+        Node current = first;
+        while (current != null) {
+            Student student = current.value;
+            if (student.studentId.equals(studentId)) {
+                // Estudiante encontrado.
+                // Si era la primera vez que lo calificábamos (nota era -1.0), incrementamos el contador.
+                if (student.grade == -1.0) {
+                    this.gradedStudentsCount++;
+                }
+                // Asignamos la nueva calificación.
+                student.grade = grade;
+                // Si esta nota es la más alta de todas, la guardamos en la variable estática.
+                if (grade > StudentRegistry.highestGradeEver) {
+                    StudentRegistry.highestGradeEver = grade;
+                }
+                return true; // Operación exitosa.
             }
-
-            // 4. Asignamos la nueva calificación.
-            student.grade = grade;
-
-            // 5. Comprobamos si esta nueva nota es la más alta registrada.
-            if (grade > StudentRegistry.highestGradeEver) {
-                StudentRegistry.highestGradeEver = grade;
-            }
-
-            // 6. Devolvemos true porque la operación fue exitosa.
-            return true;
+            current = current.next;
         }
-
-        // 7. ¡Muy importante! Avanzamos al siguiente nodo.
-        current = current.next;
+        // Si el bucle termina, el estudiante no fue encontrado.
+        return false;
     }
 
-    // 8. Si el bucle termina, el estudiante no fue encontrado.
-    return false;
-}
+    /**
+     * Calcula la calificación promedio de los estudiantes que ya han sido calificados.
+     *
+     * @return El promedio como un double, o 0.0 si no hay estudiantes calificados.
+     */
     public double calculateAverageGrade() {
         double totalGrades = 0.0;
         int studentsCounted = 0;
-        Node current = first; // 1. Empezamos desde el principio.
+        Node current = first;
 
-        // --- Primer paso: Recorrer la lista para sumar y contar ---
+        // Recorremos la lista para sumar notas y contar estudiantes calificados.
         while (current != null) {
-            // 2. Obtenemos el estudiante de este nodo.
             Student student = current.value;
-
-            if (student.grade != -1.0) { // Si el estudiante está calificado...
-                // 3. Sumamos su nota al total.
+            if (student.grade != -1.0) {
                 totalGrades += student.grade;
-                // Y lo contamos.
                 studentsCounted++;
             }
-            current = current.next; // Avanzamos al siguiente.
+            current = current.next;
         }
 
-        // --- Segundo paso: Calcular el promedio DESPUÉS del bucle ---
-        // 5. Comprobamos si encontramos algún estudiante calificado.
+        // Para evitar división por cero, comprobamos si contamos algún estudiante.
         if (studentsCounted == 0) {
-            // Si no, devolvemos 0.0 para evitar la división por cero.
             return 0.0;
         } else {
-            // Si sí, calculamos el promedio y lo devolvemos.
-            // 6. Añadimos el return.
             return totalGrades / studentsCounted;
         }
     }
+
+    /**
+     * Elimina a un estudiante de la lista, buscándolo por su ID.
+     *
+     * @param studentId El ID del estudiante a eliminar.
+     * @return El objeto Student eliminado, o null si no se encontró.
+     */
     public Student removeStudent(String studentId) {
-        // Si la lista está vacía, no hay nada que hacer.
-        if (first == null) {
-            return null;
-        }
+        if (first == null) return null;
 
-        // --- CASO ESPECIAL: El estudiante a eliminar es el primero ---
+        // Caso especial: el estudiante a eliminar es el primero.
         if (first.value.studentId.equals(studentId)) {
-            Student studentRemoved = first.value; // Guardamos el estudiante.
-            first = first.next;                   // Lo desenganchamos moviendo el puntero 'first'.
-            return studentRemoved;                // Lo devolvemos.
+            Student studentRemoved = first.value;
+            first = first.next;
+            return studentRemoved;
         }
 
-        // --- CASO GENERAL: El estudiante está en el medio o al final ---
+        // Caso general: está en el medio o al final.
         Node previous = first;
         Node current = first.next;
-
-        // Recorremos el resto de la lista.
         while (current != null) {
-            // Comprobamos si el nodo 'current' es el que buscamos.
             if (current.value.studentId.equals(studentId)) {
-                // ¡Lo encontramos!
-                // Hacemos que el nodo anterior se salte al actual.
-                previous.next = current.next;
-                // Devolvemos el estudiante del nodo que acabamos de desenganchar.
+                previous.next = current.next; // Hacemos el "bypass".
                 return current.value;
             }
-            // Si no es este, avanzamos los dos punteros.
             previous = current;
             current = current.next;
         }
 
-        // Si el bucle termina, significa que no encontramos al estudiante.
+        // No se encontró al estudiante.
         return null;
     }
+
+    /**
+     * Devuelve un array con todos los estudiantes que aún no han sido calificados.
+     *
+     * @return Un array de objetos Student cuya calificación es -1.0.
+     */
     public Student[] getStudentsWithoutGrade() {
-    // --- Primer recorrido: Contar ---
-    int count = 0;
-    Node current = first;
-    while (current != null) {
-        // Corrección 1: Definimos 'student' aquí también.
-        Student student = current.value;
-        if (student.grade == -1.0) {
-            count++;
+        // Primer recorrido: Contar para saber el tamaño del array.
+        int count = 0;
+        Node current = first;
+        while (current != null) {
+            if (current.value.grade == -1.0) {
+                count++;
+            }
+            current = current.next;
         }
-        current = current.next;
-    }
 
-    // --- Segundo recorrido: Crear y rellenar ---
-    Student[] studentsWithoutGrade = new Student[count];
-    int index = 0;
-    current = first; // Reiniciamos el recorrido
-    while (current != null) {
-        Student student = current.value;
-        // Corrección 2: Usamos EXACTAMENTE la misma condición que antes.
-        if (student.grade == -1.0) {
-            studentsWithoutGrade[index] = student;
-            index++;
+        // Segundo recorrido: Crear el array y rellenarlo.
+        Student[] studentsWithoutGrade = new Student[count];
+        int index = 0;
+        current = first;
+        while (current != null) {
+            if (current.value.grade == -1.0) {
+                studentsWithoutGrade[index] = current.value;
+                index++;
+            }
+            current = current.next;
         }
-        current = current.next;
+        return studentsWithoutGrade;
     }
-
-    return studentsWithoutGrade;
-}
 }
