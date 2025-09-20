@@ -1,0 +1,25 @@
+Examen 17: Registro de Cursos Universitarios
+Enunciado:
+Implementa una clase Course para gestionar la lista de estudiantes matriculados. Los estudiantes (Student) se gestionarán con una lista enlazada. La clase hereda de CourseBase.
+
+Clases y Atributos Base:
+
+Clase Student:
+
+Atributos: student_id (string), name (string), grade (float, inicializado en 0.0).
+
+Clase CourseBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: enroll_student(student), get_size().
+
+Funcionalidades a Desarrollar en Course:
+
+Método drop_student(student_id): Busca un estudiante por su student_id, lo elimina de la lista y lo devuelve.
+
+Método record_grade(student_id, new_grade): Busca a un estudiante por su student_id y actualiza su nota (grade).
+
+Propiedad class_average (solo lectura): Calcula y devuelve la nota media de todos los estudiantes del curso.
+
+Método de clase get_total_enrollment(): Devuelve el número total de estudiantes matriculados en todos los cursos.

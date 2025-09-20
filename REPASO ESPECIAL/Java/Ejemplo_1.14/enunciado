@@ -1,0 +1,39 @@
+Ejercicio 14: Feed de Publicaciones en Red Social
+Enunciado:
+Crea una clase PostFeed para gestionar un feed de publicaciones. Las publicaciones (Post) se almacenan en una lista enlazada. Hereda de FeedBase.
+
+Clase Post:
+
+Atributos:
+
+postId: int.
+
+author: String.
+
+likes: int.
+
+Constructor: Recibe postId y author. Inicializa likes a 0.
+
+Clase FeedBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: newPost(Post post), getPostCount().
+
+Clase a desarrollar: PostFeed (hereda de FeedBase)
+
+Atributos:
+
+totalLikesInFeed: int para la suma de todos los likes en este feed.
+
+totalPostsDeleted: static int para el número total de posts eliminados en todos los feeds.
+
+Métodos a implementar:
+
+likePost(int postId): Busca una publicación por su ID, incrementa sus likes y actualiza totalLikesInFeed. Devuelve true si tuvo éxito.
+
+getMostLikedPost(): Busca y devuelve el Post con el mayor número de likes. Si hay un empate, devuelve el primero que encuentre.
+
+deletePost(int postId): Busca una publicación por su ID y la elimina de la lista. Actualiza totalLikesInFeed y totalPostsDeleted. Devuelve el Post eliminado.
+
+getPostsByAuthor(String author): Devuelve un array de Post de un autor específico.

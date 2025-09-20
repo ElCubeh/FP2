@@ -1,0 +1,41 @@
+Ejercicio 16: Listados de Propiedades Inmobiliarias
+Enunciado:
+Crea una clase RealEstateAgency para gestionar listados de propiedades. Las propiedades (Property) se almacenan en una lista enlazada. Hereda de AgencyBase.
+
+Clase Property:
+
+Atributos:
+
+address: String.
+
+price: double.
+
+squareMeters: int.
+
+isAvailable: boolean.
+
+Constructor: Recibe address, price y squareMeters. Inicializa isAvailable a true.
+
+Clase AgencyBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: addListing(Property property), getSize().
+
+Clase a desarrollar: RealEstateAgency (hereda de AgencyBase)
+
+Atributos:
+
+commissionEarned: double para las comisiones ganadas por esta agencia.
+
+totalPropertiesSold: static int para el total de propiedades vendidas en todas las agencias.
+
+Métodos a implementar:
+
+sellProperty(String address, double commissionRate): Busca una propiedad por su dirección. Si la encuentra y está disponible, la marca como no disponible, calcula la comisión (price * commissionRate) y la suma a commissionEarned, y actualiza totalPropertiesSold. Devuelve el precio de venta.
+
+getAvailableProperties(): Devuelve un array de Property que estén disponibles.
+
+getPropertiesBelowPrice(double maxPrice): Devuelve un array de Property disponibles cuyo precio sea inferior a maxPrice.
+
+calculateAveragePricePerSquareMeter(): Calcula y devuelve el precio medio por metro cuadrado de todas las propiedades disponibles en la lista.

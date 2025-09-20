@@ -1,0 +1,39 @@
+Ejercicio 11: Cola de Pedidos de un Restaurante
+Enunciado:
+Implementa una clase RestaurantQueue para gestionar los pedidos de un restaurante. Los pedidos (Order) se procesan en el orden en que llegan (una cola) usando una lista enlazada. La clase hereda de QueueBase.
+
+Clase Order:
+
+Atributos:
+
+tableNumber: int (número de la mesa).
+
+totalPrice: double (precio total del pedido).
+
+status: String ("pending", "cooking", "served").
+
+Constructor: Recibe tableNumber y totalPrice, e inicializa status a "pending".
+
+Clase QueueBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: addOrder(Order order), getSize().
+
+Clase a desarrollar: RestaurantQueue (hereda de QueueBase)
+
+Atributos:
+
+totalRevenue: double para los ingresos de los pedidos servidos en esta cola.
+
+totalOrdersServed: static int para el total de pedidos servidos en todos los restaurantes.
+
+Métodos a implementar:
+
+serveNextOrder(): "Sirve" el primer pedido de la cola. Esto significa que lo elimina de la lista, actualiza totalRevenue con su precio y también el contador estático totalOrdersServed. Devuelve el Order servido.
+
+getCurrentRevenue(): Devuelve el totalRevenue de esta cola.
+
+getPendingOrders(): Devuelve un array de objetos Order cuyo estado sea "pending" o "cooking".
+
+cancelOrder(int tableNumber): Busca el primer pedido pendiente (pending) de una mesa específica y lo elimina de la cola. Devuelve true si se encontró y canceló, false en caso contrario.

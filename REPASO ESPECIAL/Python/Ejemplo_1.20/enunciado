@@ -1,0 +1,25 @@
+Examen 20: Diario Personal Digital
+Enunciado:
+Crea una clase Journal para gestionar entradas de un diario personal. Las entradas (Entry) se guardarán en una lista enlazada. La clase hereda de JournalBase.
+
+Clases y Atributos Base:
+
+Clase Entry:
+
+Atributos: title (string), text (string), date (string).
+
+Clase JournalBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_entry(entry), get_size().
+
+Funcionalidades a Desarrollar en Journal:
+
+Método find_entry_by_title(title): Busca una entrada por su title y la devuelve. No la elimina de la lista.
+
+Propiedad word_count (solo lectura): Calcula y devuelve el número total de palabras en todas las entradas del diario (puedes estimarlo contando los espacios en el atributo text de cada entrada).
+
+Método get_entries_for_date(date): Devuelve una lista de Python (list) con todas las entradas (Entry) que correspondan a una fecha específica.
+
+Método de clase get_total_journals_word_count(): Devuelve la suma del word_count de todos los diarios creados.

@@ -1,0 +1,27 @@
+Examen 11: Gestión de Cuentas Bancarias
+Enunciado:
+Implementa una clase BankAccount para gestionar el historial de transacciones de una cuenta. Las transacciones (Transaction) se almacenarán en una lista enlazada. La clase BankAccount debe heredar de una clase base AccountBase.
+
+Clases y Atributos Base:
+
+Clase Transaction:
+
+Atributos: type (string: "depósito" o "retirada"), amount (float), timestamp (string).
+
+Clase AccountBase:
+
+Atributo: first (referencia al primer nodo de transacciones).
+
+Métodos: get_transaction(index), get_size().
+
+Funcionalidades a Desarrollar en BankAccount:
+
+Inicializador __init__(self, owner, account_number, initial_balance): Debe establecer los atributos del dueño, número de cuenta y un saldo inicial.
+
+Método add_transaction(transaction): Añade una nueva transacción a la lista. Debe actualizar el saldo (balance) de la cuenta. Los depósitos suman y las retiradas restan. No se debe permitir que una retirada deje el saldo en negativo (en ese caso, la transacción no se añade y el método devuelve False).
+
+Propiedad balance (solo lectura): Devuelve el saldo actual de la cuenta.
+
+Método get_deposits(): Devuelve una lista de Python (list) con todas las transacciones que sean de tipo "depósito".
+
+Método de clase get_total_assets(): Devuelve la suma de los saldos de todas las cuentas (BankAccount) creadas.

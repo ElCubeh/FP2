@@ -1,0 +1,25 @@
+Examen 14: Cartera de Inversiones Inmobiliarias
+Enunciado:
+Implementa una clase Portfolio para administrar una cartera de propiedades inmobiliarias. Las propiedades (Property) se gestionarán con una lista enlazada. La clase hereda de PortfolioBase.
+
+Clases y Atributos Base:
+
+Clase Property:
+
+Atributos: address (string), market_value (float), annual_rental_income (float).
+
+Clase PortfolioBase:
+
+Atributo: first (referencia al primer nodo de propiedades).
+
+Métodos: acquire_property(property), get_size().
+
+Funcionalidades a Desarrollar en Portfolio:
+
+Método sell_property(address): Busca una propiedad por su address, la elimina de la cartera y la devuelve. Si no la encuentra, devuelve None.
+
+Propiedad portfolio_value (solo lectura): Devuelve la suma del market_value de todas las propiedades en la cartera.
+
+Propiedad annual_yield (solo lectura): Calcula el rendimiento anual de la cartera. Es la suma de todos los annual_rental_income dividida por el portfolio_value. Devuelve 0 si el valor de la cartera es cero.
+
+Atributo de clase total_properties_managed: Un contador que registra el número total de propiedades en todas las carteras.

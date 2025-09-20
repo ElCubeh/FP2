@@ -1,0 +1,25 @@
+Examen 15: Gestión de Flota de Vehículos
+Enunciado:
+Desarrolla una clase Fleet para gestionar una flota de vehículos de una empresa. Los vehículos (Vehicle) se almacenarán en una lista enlazada. La clase hereda de FleetBase.
+
+Clases y Atributos Base:
+
+Clase Vehicle:
+
+Atributos: license_plate (string), model (string), mileage (entero).
+
+Clase FleetBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_vehicle(vehicle), get_size().
+
+Funcionalidades a Desarrollar en Fleet:
+
+Método retire_vehicle(license_plate): Busca un vehículo por su license_plate, lo elimina de la flota y lo devuelve. Actualiza un contador global con el kilometraje total de los vehículos retirados.
+
+Método update_mileage(license_plate, new_mileage): Busca un vehículo por su matrícula y actualiza su mileage. Devuelve True si la actualización fue exitosa, False si no se encontró el vehículo.
+
+Propiedad average_mileage (solo lectura): Calcula y devuelve el kilometraje promedio de todos los vehículos en la flota.
+
+Método de clase get_total_retired_mileage(): Devuelve el kilometraje total acumulado de todos los vehículos retirados de todas las flotas.

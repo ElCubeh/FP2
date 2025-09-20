@@ -1,0 +1,41 @@
+Ejercicio 12: Gestión de Pacientes en un Hospital
+Enunciado:
+Desarrolla una clase PatientList para gestionar la lista de pacientes de un hospital. Los pacientes (Patient) se almacenan en una lista enlazada. Hereda de PatientListBase.
+
+Clase Patient:
+
+Atributos:
+
+patientId: String (identificador único).
+
+name: String.
+
+diagnosis: String (diagnóstico médico).
+
+priority: int (1 para Urgente, 2 para Normal, 3 para Leve).
+
+Constructor: Recibe todos los atributos.
+
+Clase PatientListBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: admitPatient(Patient patient), getPatient(int index).
+
+Clase a desarrollar: PatientList (hereda de PatientListBase)
+
+Atributos:
+
+urgentPatientsCount: int para el número de pacientes urgentes en esta lista.
+
+totalPatientsDischarged: static int para el total de pacientes dados de alta en todos los hospitales.
+
+Métodos a implementar:
+
+dischargePatient(String patientId): Busca un paciente por su ID, lo elimina de la lista y actualiza totalPatientsDischarged. Si el paciente era urgente, también actualiza urgentPatientsCount. Devuelve el Patient dado de alta.
+
+getUrgentPatients(): Devuelve un array de Patient cuya prioridad sea 1.
+
+updateDiagnosis(String patientId, String newDiagnosis): Busca un paciente por su ID y actualiza su diagnóstico. Devuelve true si tuvo éxito.
+
+findNextUrgentPatient(): Devuelve el primer Patient de la lista que tenga prioridad 1, sin eliminarlo.

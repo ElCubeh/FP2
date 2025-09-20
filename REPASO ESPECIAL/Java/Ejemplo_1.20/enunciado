@@ -1,0 +1,41 @@
+Ejercicio 20: Sistema de Reservas de Hotel
+Enunciado:
+Implementa una clase HotelBookings para gestionar las reservas de un hotel. Las reservas (Booking) se almacenan en una lista enlazada. Hereda de BookingsBase.
+
+Clase Booking:
+
+Atributos:
+
+bookingId: int.
+
+guestName: String.
+
+roomNumber: int.
+
+nights: int.
+
+Constructor: Recibe todos los atributos.
+
+Clase BookingsBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: addBooking(Booking booking).
+
+Clase a desarrollar: HotelBookings (hereda de BookingsBase)
+
+Atributos:
+
+occupiedRoomsCount: int para el número de habitaciones ocupadas.
+
+totalNightsBooked: static int para el total de noches reservadas en todos los hoteles.
+
+Métodos a implementar:
+
+checkIn(int bookingId): Busca una reserva por su ID y la "activa" (aunque no haya un estado explícito, este método podría devolver el número de noches). Incrementa occupiedRoomsCount y totalNightsBooked.
+
+checkOut(int roomNumber): Busca la reserva asociada a un número de habitación y la elimina de la lista. Decrementa occupiedRoomsCount. Devuelve la Booking finalizada.
+
+findBookingByGuest(String guestName): Busca y devuelve la primera Booking de un huésped.
+
+getRoomsOccupied(): Devuelve un array de int con los números de todas las habitaciones (roomNumber) que están actualmente ocupadas.

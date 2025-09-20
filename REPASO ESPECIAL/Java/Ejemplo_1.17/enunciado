@@ -1,0 +1,41 @@
+Ejercicio 17: Gestión de Membresías de Gimnasio
+Enunciado:
+Implementa una clase GymRegister para gestionar a los miembros de un gimnasio. Los miembros (Member) se almacenan en una lista enlazada. Hereda de RegisterBase.
+
+Clase Member:
+
+Atributos:
+
+memberId: int.
+
+name: String.
+
+membershipType: String ("Basic", "Premium").
+
+visits: int.
+
+Constructor: Recibe memberId, name y membershipType. Inicializa visits a 0.
+
+Clase RegisterBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: addMember(Member member).
+
+Clase a desarrollar: GymRegister (hereda de RegisterBase)
+
+Atributos:
+
+premiumMembersCount: int para el número de miembros "Premium".
+
+totalCheckIns: static long para el número total de visitas en todos los gimnasios.
+
+Métodos a implementar:
+
+checkInMember(int memberId): Busca un miembro por su ID, incrementa su contador de visits y actualiza totalCheckIns. Devuelve el número total de visitas de ese miembro.
+
+upgradeToPremium(int memberId): Busca un miembro y cambia su membershipType a "Premium". Si no lo era ya, incrementa premiumMembersCount.
+
+getMostActiveMember(): Busca y devuelve al Member con el mayor número de visits.
+
+removeInactiveMembers(int minVisits): Elimina de la lista a todos los miembros que tengan menos visitas que minVisits. Devuelve el número de miembros eliminados.

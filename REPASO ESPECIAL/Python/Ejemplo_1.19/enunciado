@@ -1,0 +1,25 @@
+Examen 19: Registro de Prescripciones Médicas
+Enunciado:
+Implementa una clase PatientLog para gestionar las prescripciones médicas de un paciente. Las prescripciones (Prescription) se almacenarán en una lista enlazada. La clase hereda de PatientLogBase.
+
+Clases y Atributos Base:
+
+Clase Prescription:
+
+Atributos: drug_name (string), dosage_mg (entero), is_active (booleano).
+
+Clase PatientLogBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_prescription(prescription), get_size().
+
+Funcionalidades a Desarrollar en PatientLog:
+
+Método deactivate_prescription(drug_name): Busca una prescripción por su drug_name y cambia su estado is_active a False. Devuelve True si tuvo éxito.
+
+Propiedad active_prescriptions_count (solo lectura): Devuelve el número de prescripciones que están activas (is_active es True).
+
+Método get_active_drugs(): Devuelve una lista de Python (list) con los nombres (drug_name) de todas las prescripciones activas.
+
+Atributo de clase total_prescriptions_issued: Un contador que registra el número total de prescripciones añadidas a todos los registros de pacientes.

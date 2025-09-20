@@ -1,0 +1,41 @@
+Ejercicio 19: Inventario de una Biblioteca de Juegos
+Enunciado:
+Crea una clase GameLibrary para gestionar una colección de videojuegos. Los juegos (VideoGame) se almacenan en una lista enlazada. Hereda de LibraryBase.
+
+Clase VideoGame:
+
+Atributos:
+
+gameId: int.
+
+title: String.
+
+genre: String.
+
+hoursPlayed: int.
+
+Constructor: Recibe gameId, title y genre. Inicializa hoursPlayed a 0.
+
+Clase LibraryBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: addGame(VideoGame game), getSize().
+
+Clase a desarrollar: GameLibrary (hereda de LibraryBase)
+
+Atributos:
+
+totalHoursPlayedInLibrary: int para el total de horas jugadas en esta biblioteca.
+
+mostPlayedGenre: static String para el género más jugado en todas las bibliotecas. (Este es un desafío).
+
+Métodos a implementar:
+
+playGame(int gameId, int hours): Busca un juego por su ID, le suma las hours jugadas y actualiza totalHoursPlayedInLibrary.
+
+getMostPlayedGame(): Busca y devuelve el VideoGame con más hoursPlayed.
+
+getGamesByGenre(String genre): Devuelve un array de VideoGame de un género específico.
+
+tradeInGame(int gameId): Simula vender un juego. Lo elimina de la lista y devuelve sus hoursPlayed.

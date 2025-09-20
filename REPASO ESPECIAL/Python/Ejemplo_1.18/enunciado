@@ -1,0 +1,25 @@
+Examen 18: Álbum de Fotos Digital
+Enunciado:
+Desarrolla una clase Album para organizar una colección de fotos digitales. Las fotos (Photo) se almacenarán en una lista enlazada. La clase hereda de AlbumBase.
+
+Clases y Atributos Base:
+
+Clase Photo:
+
+Atributos: filename (string), date_taken (string), size_mb (float).
+
+Clase AlbumBase:
+
+Atributo: first (referencia al primer nodo).
+
+Métodos: add_photo(photo), get_size().
+
+Funcionalidades a Desarrollar en Album:
+
+Método delete_photo(filename): Busca una foto por su filename, la elimina del álbum y la devuelve.
+
+Propiedad total_size_mb (solo lectura): Devuelve la suma del size_mb de todas las fotos del álbum.
+
+Método find_photos_by_date(date): Devuelve una lista de Python (list) con todas las fotos que fueron tomadas en la date especificada.
+
+Método de clase get_total_photos_stored(): Devuelve el número total de fotos almacenadas en todos los álbumes.

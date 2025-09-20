@@ -1,0 +1,25 @@
+Examen 12: Sistema de Pedidos de Restaurante
+Enunciado:
+Desarrolla una clase Order para gestionar los platos pedidos por una mesa en un restaurante. Los platos (Dish) se guardarán en una lista enlazada. La clase Order hereda de OrderBase.
+
+Clases y Atributos Base:
+
+Clase Dish:
+
+Atributos: name (string), price (float), category (string: "entrante", "principal", "postre").
+
+Clase OrderBase:
+
+Atributo: first (referencia al primer nodo de platos).
+
+Métodos: add_dish(dish), get_size().
+
+Funcionalidades a Desarrollar en Order:
+
+Método remove_dish_by_name(name): Busca el primer plato en el pedido que coincida con name y lo elimina. Devuelve el objeto Dish eliminado o None si no se encuentra.
+
+Propiedad subtotal (solo lectura): Calcula y devuelve el coste total del pedido (la suma de los precios de todos los platos).
+
+Método get_dishes_by_category(category): Devuelve una lista de Python (list) con todos los platos del pedido que pertenezcan a la categoría especificada.
+
+Atributo de clase total_revenue: Un contador que almacena los ingresos totales de todos los pedidos que han sido "cerrados" (para este ejercicio, puedes simularlo con un método close_order() que sume el subtotal del pedido a total_revenue y vacíe la lista de platos).

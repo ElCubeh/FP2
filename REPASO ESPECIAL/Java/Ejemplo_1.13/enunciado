@@ -1,0 +1,41 @@
+Ejercicio 13: Flota de Coches de Alquiler
+Enunciado:
+Implementa una clase CarFleet para gestionar una flota de coches de alquiler. Los coches (RentalCar) se gestionan en una lista enlazada. Hereda de FleetBase.
+
+Clase RentalCar:
+
+Atributos:
+
+licensePlate: String (matrícula).
+
+model: String.
+
+mileage: int (kilometraje).
+
+isRented: boolean.
+
+Constructor: Recibe licensePlate, model y mileage. Inicializa isRented a false.
+
+Clase FleetBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: addCar(RentalCar car), getSize().
+
+Clase a desarrollar: CarFleet (hereda de CarFleetBase)
+
+Atributos:
+
+rentedCarsCount: int para el número de coches alquilados en esta flota.
+
+totalKilometersDriven: static long para el total de kilómetros recorridos por todos los coches en todas las flotas.
+
+Métodos a implementar:
+
+rentCar(String licensePlate): Busca un coche por su matrícula. Si lo encuentra y no está alquilado, lo marca como isRented = true y actualiza rentedCarsCount. Devuelve el RentalCar.
+
+returnCar(String licensePlate, int kilometersDriven): Busca un coche por su matrícula, lo marca como isRented = false, actualiza su mileage sumándole los kilometersDriven y actualiza totalKilometersDriven y rentedCarsCount.
+
+getAvailableCars(): Devuelve un array de RentalCar que no estén alquilados.
+
+getCarWithHighestMileage(): Busca y devuelve el RentalCar con el mayor kilometraje de la flota.

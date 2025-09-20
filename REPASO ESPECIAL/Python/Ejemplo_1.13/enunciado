@@ -1,0 +1,25 @@
+Examen 13: Lista de Invitados a un Evento
+Enunciado:
+Crea una clase Event para gestionar la lista de invitados. Los invitados (Guest) se almacenarán en una lista enlazada. La clase Event hereda de EventBase.
+
+Clases y Atributos Base:
+
+Clase Guest:
+
+Atributos: name (string), rsvp_status (string: "pendiente", "asistirá", "no asistirá"), plus_ones (entero).
+
+Clase EventBase:
+
+Atributo: first (referencia al primer nodo de invitados).
+
+Métodos: add_guest(guest), get_size().
+
+Funcionalidades a Desarrollar en Event:
+
+Método update_rsvp_status(name, new_status): Busca al invitado por su name y actualiza su rsvp_status. Devuelve True si se encontró y actualizó al invitado, y False en caso contrario.
+
+Propiedad attendee_count (solo lectura): Calcula y devuelve el número total de personas que asistirán al evento (suma de todos los invitados con estado "asistirá" más sus plus_ones).
+
+Método get_pending_guests(): Devuelve una lista de Python (list) con los nombres (name) de todos los invitados cuyo estado sea "pendiente".
+
+Método de clase get_total_confirmed_attendees(): Devuelve la suma de attendee_count de todos los eventos creados.

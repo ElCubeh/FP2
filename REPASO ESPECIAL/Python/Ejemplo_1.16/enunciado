@@ -1,0 +1,25 @@
+Examen 16: Gestor de Suscripciones a Podcasts
+Enunciado:
+Crea una clase PodcastFeed para gestionar los episodios de un podcast al que estás suscrito. Los episodios (Episode) se almacenarán en una lista enlazada. La clase hereda de PodcastFeedBase.
+
+Clases y Atributos Base:
+
+Clase Episode:
+
+Atributos: title (string), duration_minutes (entero), is_played (booleano).
+
+Clase PodcastFeedBase:
+
+Atributo: first (referencia al primer nodo de episodios).
+
+Métodos: add_new_episode(episode), get_size().
+
+Funcionalidades a Desarrollar en PodcastFeed:
+
+Método mark_as_played(title): Busca un episodio por su title y cambia su estado is_played a True. Devuelve el objeto Episode actualizado o None si no lo encuentra.
+
+Propiedad unplayed_duration (solo lectura): Devuelve la suma total de la duración (en minutos) de todos los episodios que no han sido reproducidos (is_played es False).
+
+Método archive_played_episodes(): Elimina todos los episodios de la lista que ya han sido reproducidos. Devuelve el número de episodios archivados.
+
+Atributo de clase total_listening_time: Un contador que almacena la suma de la duración de todos los episodios marcados como reproducidos en todos los feeds.

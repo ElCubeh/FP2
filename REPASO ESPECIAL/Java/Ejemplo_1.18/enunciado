@@ -1,0 +1,37 @@
+Ejercicio 18: Inscripción en Cursos Universitarios
+Enunciado:
+Desarrolla una clase CourseRoster para gestionar los estudiantes inscritos en un curso. Las inscripciones (Enrollment) se almacenan en una lista enlazada. Hereda de RosterBase.
+
+Clase Enrollment:
+
+Atributos:
+
+studentId: String.
+
+grade: double (calificación, -1.0 si no está calificado).
+
+Constructor: Recibe studentId. Inicializa grade a -1.0.
+
+Clase RosterBase (Proporcionada):
+
+Atributo: protected first.
+
+Métodos: enrollStudent(Enrollment enrollment), getEnrollmentCount().
+
+Clase a desarrollar: CourseRoster (hereda de RosterBase)
+
+Atributos:
+
+passCount: int para el número de aprobados en este curso.
+
+highestGradeInUniversity: static double para la nota más alta en todos los cursos.
+
+Métodos a implementar:
+
+assignGrade(String studentId, double grade): Busca una inscripción por studentId y le asigna una nota. Si la nota es >= 5.0, incrementa passCount. También actualiza highestGradeInUniversity si corresponde.
+
+calculatePassRate(): Devuelve el porcentaje de estudiantes que han aprobado (nota >= 5.0) sobre el total de estudiantes calificados.
+
+getFailingStudents(): Devuelve un array de Enrollment de estudiantes que han suspendido (0.0 <= nota < 5.0).
+
+dropStudent(String studentId): Elimina a un estudiante del curso. Si tenía una nota de aprobado, decrementa passCount. Devuelve el Enrollment eliminado.
